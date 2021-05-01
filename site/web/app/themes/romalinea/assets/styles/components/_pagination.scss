@@ -1,0 +1,104 @@
+.pagination {
+  display: flex;
+  @include list-unstyled();
+  @include border-radius();
+}
+
+.page-link {
+  position: relative;
+  display: block;
+  padding: $pagination-padding-y $pagination-padding-x;
+  margin-left: -$pagination-border-width;
+  line-height: $pagination-line-height;
+  color: $pagination-color;
+  text-decoration: if($link-decoration == none, null, none);
+  background-color: $pagination-bg;
+  border-left: $pagination-border-width solid $pagination-border-color;
+  border-right: $pagination-border-width solid $pagination-border-color;
+  &.prev {
+    width: 18px;
+    height: 18px;
+    padding: 2rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='#{$carousel-control-color}' width='7.97' height='13.2' viewBox='0 0 7.97 13.2'><path fill='#BCBCBC' d='M6.554.228L.286 5.796A.851.851 0 0 0 .25 7.033l5.904 5.904a.851.851 0 0 0 1.203-1.203L2.09 6.469 7.684 1.5A.851.851 0 0 0 6.554.228z'/></svg>") ;
+    &.unactive {
+      background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='#{$carousel-control-color}' width='7.97' height='13.2' viewBox='0 0 7.97 13.2'><path fill='#DDD' d='M7.119.014a.846.846 0 0 0-.564.215L.286 5.796A.851.851 0 0 0 .25 7.033l5.904 5.904a.848.848 0 0 0 1.202 0 .851.851 0 0 0 0-1.203L2.09 6.469 7.684 1.5A.851.851 0 0 0 7.119.014'/></svg>") ;
+      &:hover {
+        background-color: $transparent;
+      }
+    }
+  }
+  &.next {
+    width: 18px;
+    height: 18px;
+    padding: 2rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='#{$carousel-control-color}' width='7.97' height='13.2' viewBox='0 0 7.97 13.2'><path fill='#BCBCBC' d='M1.416.228l6.268 5.568a.851.851 0 0 1 .036 1.237l-5.904 5.904a.851.851 0 0 1-1.203-1.203L5.88 6.469.286 1.5A.852.852 0 0 1 1.416.228z'/></svg>") ;
+    &.unactive {
+      background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='#{$carousel-control-color}' width='7.97' height='13.2' viewBox='0 0 7.97 13.2'><path fill='#DDD' d='M.851.014c.201 0 .402.071.564.215l6.268 5.568a.851.851 0 0 1 .037 1.236l-5.904 5.904a.848.848 0 0 1-1.202 0 .851.851 0 0 1 0-1.203L5.88 6.469.286 1.5A.852.852 0 0 1 .851.014'/></svg>") ;
+      &:hover {
+        background-color: $transparent;
+      }
+    }
+  }
+
+  &:hover {
+    z-index: 2;
+    color: $pagination-hover-color;
+    text-decoration: none;
+    background-color: $pagination-hover-bg;
+    border-color: $pagination-hover-border-color;
+  }
+
+  &:focus {
+    z-index: 3;
+    outline: $pagination-focus-outline;
+    box-shadow: $pagination-focus-box-shadow;
+  }
+}
+
+.page-item {
+  &:first-child {
+    .page-link {
+      margin-left: 0;
+      @include border-left-radius($border-radius);
+    }
+  }
+  &:last-child {
+    .page-link {
+      @include border-right-radius($border-radius);
+    }
+  }
+
+  &.active .page-link {
+    z-index: 3;
+    color: $pagination-active-color;
+    background-color: $pagination-active-bg;
+    border-color: $pagination-active-border-color;
+    @extend .shadow-lg-orange;
+  }
+
+  &.disabled .page-link {
+    color: $pagination-disabled-color;
+    pointer-events: none;
+    // Opinionated: remove the "hand" cursor set previously for .page-link
+    cursor: auto;
+    background-color: $pagination-disabled-bg;
+    border-color: $pagination-disabled-border-color;
+  }
+}
+
+
+//
+// Sizing
+//
+
+.pagination-lg {
+  @include pagination-size($pagination-padding-y-lg, $pagination-padding-x-lg, $font-size-lg, $line-height-lg, $border-radius-lg);
+}
+
+.pagination-sm {
+  @include pagination-size($pagination-padding-y-sm, $pagination-padding-x-sm, $font-size-sm, $line-height-sm, $border-radius-sm);
+}

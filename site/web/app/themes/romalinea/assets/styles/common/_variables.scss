@@ -1,0 +1,143 @@
+// Grid settings
+$main-sm-columns:       12;
+$sidebar-sm-columns:    3;
+$gutter:.5rem;
+$gutter-0:0;
+$font-size-base: 1rem;
+$enable-responsive-font-sizes:                true !default;
+$grid-gutter-width_large: 30px;
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1441px
+
+);
+
+$container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        lg: 1260px,
+        xl: 1500px
+
+);
+
+// number of cards per line for each breakpoint
+$cards-per-line: (
+    xs: 1,
+    sm: 2,
+    md: 3,
+    lg: 3,
+    xl: 3
+);
+
+$font-family-base: 'ProximaNova-Regular';
+$body-bg: #f9f9f9;
+$light-color:  #f8f8f8;
+$light-color-heading:  #bcbcbc;
+$light-color-text-dark:  #898989;
+$dark-color: #333333;
+$dark-color-transparent: rgba(51, 51, 51, 0.5);
+$black: #111111;
+$border-dark-color:  #555555;
+$border-light-color:  #e7e7e7;
+$white: #fff;
+$grey: #f7f7f7;
+$yellow: #ffb600;
+$orange: #ff5a00;
+$transparent: transparent;
+
+$box-shadow-lg:               0 .5rem 1.5rem rgba($dark-color, .5) !default;
+
+$pagination-padding-y-lg:    1.2rem;
+$pagination-padding-x-lg:    1.76954rem;
+$pagination-active-bg: $orange;
+$font-size-lg: 1.05rem;
+$box-shadow-lg-orange:               .05rem 0rem .25rem .25rem rgba($orange, .175) !default;
+$pagination-hover-bg: rgba($orange, .175);
+
+$border-radius-lg: 0;
+$navbar-padding-y: 0;
+$navbar-padding-x: 0;
+
+$nav-tabs-border-radius: 0;
+$nav-tabs-link-active-bg: transparent;
+$nav-tabs-link-active-border-color: transparent;
+
+$carousel-indicator-width: 10px;
+$carousel-indicator-height: 10px;
+
+
+$headings-color: $dark-color;
+$headings-font-family: 'PF Encore Sans Regular';
+$headings-font-weight: normal;
+
+$card-spacer-x:                     0 !default;
+$card-spacer-y:                     .15rem !default;
+//$card-spacer-y:                     .75rem !default;
+
+$breadcrumb-bg: $dark-color;
+$breadcrumb-font-size: .8rem;
+$breadcrumb-padding-y: .1rem;
+$breadcrumb-margin-bottom: 2rem;
+$breadcrumb-divider: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='#{$white}' width='5' height='8.078' viewBox='0 0 5 8.078'>	<path fill='#FFFFFF' d='M4.815,2.074H2.5v1.852h2.315V2.074 M2.5,5.778V3.926H0.185v1.852H2.5 M0.185,2.074H2.5V0.222H0.185V2.074'/></svg>") ;
+$breadcrumb-divider-plus: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='#{$white}' width='7.297' height='8.078' viewBox='0 0 7.297 8.078'><path fill='#FFFFFF' d='M4.806,2.074H2.49v1.852h2.315L4.806,2.074 M7.12,2.074H4.806v1.852h2.315L7.12,2.074 M2.49,2.074H0.175
+	v1.852H2.49V2.074 M4.806,5.778V3.926H2.49v1.852H4.806 M2.49,2.074h2.315V0.222H2.49V2.074'/></svg>") ;
+$breadcrumb-item-padding: .5rem;
+$close-font-size: 1.3rem;
+$breadcrumb-divider-color: $white;
+
+$h1-font-size:                $font-size-base * 2.5 !default;
+$h2-font-size:                $font-size-base * 1.25  !default;
+$h3-font-size:                $font-size-base * 1 !default;
+$h4-font-size:                $font-size-base * .85 !default;
+$h5-font-size:                $font-size-base * 1.25 !default;
+$h6-font-size:                $font-size-base !default;
+
+
+$btn-padding-y-lg: 1.9rem;
+$padding-x: 1.9rem;
+
+$nav-link-padding-y: 0.5rem;
+$nav-link-padding-x: 1rem;
+
+$navbar-brand-padding-y: 0;
+
+/**
+ * WooCommerce CSS Variables
+ */
+
+$woocommerce:   	#a46497 !default;
+$green:         	#7ad03a !default;
+$red:           	#a00 !default;
+$blue:          	#2ea2cc !default;
+
+$primary:           $dark-color !default;                                    // Primary color for buttons (alt)
+$primarytext:       desaturate(lighten($primary, 50%), 18%) !default;    // Text on primary color bg
+
+$secondary:         desaturate(lighten($primary, 40%), 21%) !default;    // Secondary buttons
+$secondarytext:     desaturate(darken($secondary, 60%), 21%) !default;   // Text on secondary color bg
+
+$highlight:         adjust-hue($primary, 150deg) !default;               // Prices, In stock labels, sales flash
+$highlightext:      desaturate(lighten($highlight, 50%), 18%) !default;  // Text on highlight color bg
+
+$contentbg:         #fff !default;                                       // Content BG - Tabs (active state)
+$subtext:           #767676 !default;                                    // small, breadcrumbs etc
+
+$carousel-control-color:             $white !default;
+$carousel-control-icon-width:         61px;
+$carousel-control-prev-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='#{$carousel-control-color}' width='61' height='61' viewBox='0 0 61 61'>	<polygon points='31.442,23.223 24.708,29.503 31.465,35.435 32.868,33.838 27.876,29.455 32.892,24.777
+		31.442,23.223 	'/><path d='M30.042,0.992c16.018,0,29.05,13.032,29.05,29.05s-13.032,29.05-29.05,29.05S0.992,46.06,0.992,30.042
+  S14.024,0.992,30.042,0.992 M30.042,0C13.45,0,0,13.45,0,30.042s13.45,30.042,30.042,30.042s30.042-13.45,30.042-30.042
+  S46.633,0,30.042,0z'/></svg>") !default;
+$carousel-control-next-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='#{$carousel-control-color}' width='61' height='61' viewBox='0 0 61 61'>	<polygon points='28.642,23.223 35.376,29.503 28.618,35.435 27.215,33.838 32.208,29.455 27.192,24.777
+  28.642,23.223 	'/><path d='M30.042,0.992c16.018,0,29.05,13.032,29.05,29.05s-13.032,29.05-29.05,29.05S0.992,46.06,0.992,30.042
+  		S14.024,0.992,30.042,0.992 M0,30.042c0,16.592,13.45,30.042,30.042,30.042s30.042-13.45,30.042-30.042S46.633,0,30.042,0
+  		S0,13.45,0,30.042z'/></svg>") !default;
+
+$btn-padding-y-md: 1.5rem;
+$btn-padding-x-md: 1.5rem;
+$btn-font-size-md: 1rem;
+$btn-line-height-md: 1.5;
+$btn-border-radius-md: 2.3rem;

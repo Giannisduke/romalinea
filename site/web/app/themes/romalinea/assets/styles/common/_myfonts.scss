@@ -1,0 +1,194 @@
+@font-face {
+    font-family: 'ProximaNova-Regular';
+    src: url('../fonts/ProximaNova-Regular.eot');
+    src: url('../fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ProximaNova-Regular.woff2') format('woff2'),
+        url('../fonts/ProximaNova-Regular.woff') format('woff'),
+        url('../fonts/ProximaNova-Regular.ttf') format('truetype'),
+        url('../fonts/ProximaNova-Regular.svg#ProximaNova-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ProximaNova-Black';
+    src: url('../fonts/ProximaNova-Black.eot');
+    src: url('../fonts/ProximaNova-Black.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ProximaNova-Black.woff2') format('woff2'),
+        url('../fonts/ProximaNova-Black.woff') format('woff'),
+        url('../fonts/ProximaNova-Black.ttf') format('truetype'),
+        url('../fonts/ProximaNova-Black.svg#ProximaNova-Black') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ProximaNovaT-Thin';
+    src: url('../fonts/ProximaNovaT-Thin.eot');
+    src: url('../fonts/ProximaNovaT-Thin.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ProximaNovaT-Thin.woff2') format('woff2'),
+        url('../fonts/ProximaNovaT-Thin.woff') format('woff'),
+        url('../fonts/ProximaNovaT-Thin.ttf') format('truetype'),
+        url('../fonts/ProximaNovaT-Thin.svg#ProximaNovaT-Thin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ProximaNova-Bold';
+    src: url('../fonts/ProximaNova-Bold.eot');
+    src: url('../fonts/ProximaNova-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ProximaNova-Bold.woff2') format('woff2'),
+        url('../fonts/ProximaNova-Bold.woff') format('woff'),
+        url('../fonts/ProximaNova-Bold.ttf') format('truetype'),
+        url('../fonts/ProximaNova-Bold.svg#ProximaNova-Bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ProximaNovaA-Thin';
+    src: url('../fonts/ProximaNovaA-Thin.eot');
+    src: url('../fonts/ProximaNovaA-Thin.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ProximaNovaA-Thin.woff2') format('woff2'),
+        url('../fonts/ProximaNovaA-Thin.woff') format('woff'),
+        url('../fonts/ProximaNovaA-Thin.ttf') format('truetype'),
+        url('../fonts/ProximaNovaA-Thin.svg#ProximaNovaA-Thin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ProximaNovaA-Light';
+    src: url('../fonts/ProximaNovaA-Light.eot');
+    src: url('../fonts/ProximaNovaA-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ProximaNovaA-Light.woff2') format('woff2'),
+        url('../fonts/ProximaNovaA-Light.woff') format('woff'),
+        url('../fonts/ProximaNovaA-Light.ttf') format('truetype'),
+        url('../fonts/ProximaNovaA-Light.svg#ProximaNovaA-Light') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ProximaNovaA-Bold';
+    src: url('../fonts/ProximaNovaA-Bold.eot');
+    src: url('../fonts/ProximaNovaA-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ProximaNovaA-Bold.woff2') format('woff2'),
+        url('../fonts/ProximaNovaA-Bold.woff') format('woff'),
+        url('../fonts/ProximaNovaA-Bold.ttf') format('truetype'),
+        url('../fonts/ProximaNovaA-Bold.svg#ProximaNovaA-Bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ProximaNova-Extrabld';
+    src: url('../fonts/ProximaNova-Extrabld.eot');
+    src: url('../fonts/ProximaNova-Extrabld.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ProximaNova-Extrabld.woff2') format('woff2'),
+        url('../fonts/ProximaNova-Extrabld.woff') format('woff'),
+        url('../fonts/ProximaNova-Extrabld.ttf') format('truetype'),
+        url('../fonts/ProximaNova-Extrabld.svg#ProximaNova-Extrabld') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PF Encore Sans Bold';
+    src: url('../fonts/PFEncoreSansPro-Bold.eot');
+    src: url('../fonts/PFEncoreSansPro-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/PFEncoreSansPro-Bold.woff2') format('woff2'),
+        url('../fonts/PFEncoreSansPro-Bold.woff') format('woff'),
+        url('../fonts/PFEncoreSansPro-Bold.ttf') format('truetype'),
+        url('../fonts/PFEncoreSansPro-Bold.svg#PFEncoreSansPro-Bold') format('svg');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PF Encore Sans Italic';
+    src: url('../fonts/PFEncoreSansPro-Italic.eot');
+    src: url('../fonts/PFEncoreSansPro-Italic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/PFEncoreSansPro-Italic.woff2') format('woff2'),
+        url('../fonts/PFEncoreSansPro-Italic.woff') format('woff'),
+        url('../fonts/PFEncoreSansPro-Italic.ttf') format('truetype'),
+        url('../fonts/PFEncoreSansPro-Italic.svg#PFEncoreSansPro-Italic') format('svg');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PF Encore Sans Regular';
+    src: url('../fonts/PFEncoreSansPro-Regular.eot');
+    src: url('../fonts/PFEncoreSansPro-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/PFEncoreSansPro-Regular.woff2') format('woff2'),
+        url('../fonts/PFEncoreSansPro-Regular.woff') format('woff'),
+        url('../fonts/PFEncoreSansPro-Regular.ttf') format('truetype'),
+        url('../fonts/PFEncoreSansPro-Regular.svg#PFEncoreSansPro-Regular') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PF Encore Sans LightItalic';
+    src: url('../fonts/PFEncoreSansPro-LightItalic.eot');
+    src: url('../fonts/PFEncoreSansPro-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/PFEncoreSansPro-LightItalic.woff2') format('woff2'),
+        url('../fonts/PFEncoreSansPro-LightItalic.woff') format('woff'),
+        url('../fonts/PFEncoreSansPro-LightItalic.ttf') format('truetype'),
+        url('../fonts/PFEncoreSansPro-LightItalic.svg#PFEncoreSansPro-LightItalic') format('svg');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PF Encore Sans Light';
+    src: url('../fonts/PFEncoreSansPro-Light.eot');
+    src: url('../fonts/PFEncoreSansPro-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/PFEncoreSansPro-Light.woff2') format('woff2'),
+        url('../fonts/PFEncoreSansPro-Light.woff') format('woff'),
+        url('../fonts/PFEncoreSansPro-Light.ttf') format('truetype'),
+        url('../fonts/PFEncoreSansPro-Light.svg#PFEncoreSansPro-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PF Encore Sans Pro Book';
+    src: url('../fonts/PFEncoreSansPro-Book.eot');
+    src: url('../fonts/PFEncoreSansPro-Book.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/PFEncoreSansPro-Book.woff2') format('woff2'),
+        url('../fonts/PFEncoreSansPro-Book.woff') format('woff'),
+        url('../fonts/PFEncoreSansPro-Book.ttf') format('truetype'),
+        url('../fonts/PFEncoreSansPro-Book.svg#PFEncoreSansPro-Book') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PF Encore Sans Pro Medium';
+    src: url('../fonts/PFEncoreSansPro-Medium.eot');
+    src: url('../fonts/PFEncoreSansPro-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/PFEncoreSansPro-Medium.woff2') format('woff2'),
+        url('../fonts/PFEncoreSansPro-Medium.woff') format('woff'),
+        url('../fonts/PFEncoreSansPro-Medium.ttf') format('truetype'),
+        url('../fonts/PFEncoreSansPro-Medium.svg#PFEncoreSansPro-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}

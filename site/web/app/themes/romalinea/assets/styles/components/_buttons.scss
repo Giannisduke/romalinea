@@ -1,0 +1,30 @@
+.btn {
+  letter-spacing: .1rem;
+  line-height: 1.1rem;
+}
+
+.btn-custom {
+    @include button-variant($dark-color-transparent, #222222);
+  //  @include button-size($btn-padding-y-md, $btn-padding-x-md, $btn-font-size-md, $btn-line-height-md);
+    //opacity: .5;
+}
+
+.btn-custom-outline {
+    @include button-outline-variant(#222222, #cece19, transparent, #cece19);
+    border: 1px solid transparent;
+}
+
+.btn-white {
+    @include button-variant($white, $border-light-color, $border-light-color, $border-light-color, $white, red);
+    color: #fff;
+    border-radius: 0;
+    border-top: 0;
+    border-bottom: 0;
+    padding: 2.2rem;
+}
+
+.btn-transparent {
+    @include button-variant($white, $white, $white, $white, $white, $white);
+    letter-spacing: .05rem;
+    padding: .375rem .5rem;
+}

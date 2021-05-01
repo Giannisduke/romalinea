@@ -1,0 +1,47 @@
+.carousel-item.active {
+//  min-height: 80vh;
+}
+.relative {
+  position: relative;
+}
+
+.position {
+  font-size: 11.5625rem;
+  position: absolute;
+  font-family: 'PF Encore Sans Bold';
+  line-height: 10rem;
+  letter-spacing: -0.7rem;
+  text-transform: uppercase;
+}
+
+
+
+.more {
+  bottom: 11rem;
+  position: absolute;
+  left: 11rem;
+}
+
+.carousel-caption {
+    top: 40%;
+}
+
+.relative {
+  & img {
+    position: relative;
+    top: -4rem;
+  }
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  z-index: 500;
+}
+
+
+
+.carousel-indicators {
+  li {
+border-radius: 100%;
+  }
+}

@@ -1,0 +1,296 @@
+li.product {
+background: white;
+border-left: 1px solid $border-color;
+border-top: 1px solid $border-color;
+border-bottom: 1px solid $border-color;
+& .card-title {
+    margin-bottom: 0rem;
+}
+
+& .price-wrap {
+  @include make-col(12);
+  padding-left: 4.5rem;
+  margin-bottom: 1.75rem;
+  & bdi {
+    font-size: .8rem;
+    color: $orange;
+}
+}
+}
+
+li.product:nth-of-type(3n) {
+  border-left: 1px solid $border-color;
+  border-right: 1px solid $border-color;
+  border-top: 1px solid $border-color;
+  border-bottom: 1px solid $border-color;
+}
+
+bdi {
+  font-family: 'ProximaNova-Regular';
+  font-size: 1rem;
+  color: $primary;
+}
+
+del bdi {
+    text-decoration: line-through;
+}
+
+.single-product div.product form.cart .quantity {
+float: none;
+margin: 0;
+display: inline-block;
+}
+
+.woocommerce-product-details__short-description {
+  p {
+    text-align: justify;
+    text-justify:inter-character;
+  }
+}
+
+.woocommerce-variation-price, .simple_price {
+  @extend .d-flex;
+  @extend .flex-row;
+  @extend .align-items-center;
+  del {
+    opacity: 0.5;
+    display: inline-block;
+    padding: 0 2rem 0 0;
+    bdi {
+      font-size: 1rem;
+      font-family: 'PF Encore Sans Light';
+    }
+  }
+  bdi {
+    font-family: 'PF Encore Sans Bold';
+    font-size: 1.3125rem;
+    color: $dark-color;
+    padding: 0 .5rem 0 0;
+  }
+  .percentage {
+    padding: 0 .2rem;
+    background-color: $black;
+    color: $white;
+    font-size: .8rem;
+    letter-spacing: .025rem;
+  }
+}
+
+
+
+.simple_price {
+  @include make-col(6);
+
+}
+
+.product-sku {
+  padding: 0 0 0 0.5rem;
+  color: $black;
+  font-family: 'ProximaNovaT-Thin';
+  font-size: 1rem;
+  opacity: 0.65;
+}
+
+.product-taxonomy {
+  padding: 0 0 0.5rem 0;
+  text-align: center;
+}
+
+.badge {
+  position: absolute;
+  margin: 1rem;
+}
+
+
+.nav.nav-tabs {
+  border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
+  border-top: $nav-tabs-border-width solid $nav-tabs-border-color;
+  padding: 1rem 6rem 1rem 6rem;
+  & li.nav-item {
+    //@include make-col(2);
+    margin-bottom: 0;
+    margin-right: 5.5rem;
+    &.active {
+      & .nav-link {
+      color: $orange;
+    }
+    }
+    & .nav-link {
+      font-family: 'ProximaNova-Bold';
+      font-size: .8rem;
+      letter-spacing: .065rem;
+      text-transform: uppercase;
+    }
+  }
+
+}
+
+.woocommerce-Tabs-catalog {
+  background-color: $light-color;
+    padding: 2rem 7rem 4rem 7rem;
+}
+
+.product-meta {
+  @extend .d-flex;
+  @extend .flex-row;
+  & span {
+    @extend .d-flex;
+    @extend .flex-row;
+    @extend .flex-wrap;
+    //background-position-x: 6%;
+    background-position-y: top;
+    background-repeat: no-repeat;
+    padding: 0 0 0 1.5rem;
+  &.fetures {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='#000' width='13.3' height='18.41' viewBox='0 0 13.3 18.41'><path d='M1.636 6.577a1.627 1.627 0 1 1 0 3.254 1.627 1.627 0 0 1 0-3.254zm5.014 0a1.627 1.627 0 1 1 0 3.254 1.627 1.627 0 0 1 0-3.254zm5.014 0a1.627 1.627 0 1 1 0 3.254 1.627 1.627 0 0 1 0-3.254zm-10.028.498a1.129 1.129 0 1 0 0 2.258 1.129 1.129 0 0 0 0-2.258zm5.014 0a1.129 1.129 0 1 0 0 2.258 1.129 1.129 0 0 0 0-2.258zm5.014 0a1.129 1.129 0 1 0 0 2.258 1.129 1.129 0 0 0 0-2.258z'/></svg>");
+    & .iso:first-child {
+        padding: 0 0 0 0.5rem;
+    }
+      & :not(:first-child):before {
+        content: "\00B7";
+        padding: 0 0.5rem 0 0;
+    }
+  }
+  &.tags {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='#000' width='15.36' height='11.3' viewBox='0 0 15.36 11.3'><path d='M9.524 11.3h-7.74c-.982 0-1.78-.798-1.78-1.78V1.78C.004.798.803 0 1.784 0h7.74c.913 0 2.138.564 2.732 1.257l2.629 3.067c.627.731.627 1.921 0 2.653l-2.629 3.067c-.593.693-1.819 1.256-2.732 1.256zM1.784.464c-.726 0-1.316.59-1.316 1.316v7.74c0 .726.59 1.316 1.316 1.316h7.74c.781 0 1.871-.501 2.379-1.094l2.629-3.067c.476-.555.476-1.493 0-2.048L11.903 1.56C11.395.967 10.305.466 9.524.466L1.784.464z'/><path d='M9.524 6.98H3.332a.232.232 0 0 1 0-.464h6.192a.232.232 0 0 1 0 .464zm0-2.195H3.332a.232.232 0 0 1 0-.465h6.192a.232.232 0 0 1 0 .465z'/><path d='M7.526 8.978a.232.232 0 0 1-.232-.232V2.554a.232.232 0 0 1 .464 0v6.192a.232.232 0 0 1-.232.232zm-2.195 0a.232.232 0 0 1-.232-.232V2.554a.232.232 0 0 1 .464 0v6.192a.232.232 0 0 1-.232.232z'/><circle cx='12.638' cy='5.65' r='.677'/></svg>");
+    & .tag:first-child {
+        padding: 0 0 0 0.5rem;
+    }
+      & :not(:first-child):before {
+        content: "\00B7";
+        padding: 0 0.5rem 0 0;
+    }
+  }
+  &.toe-cap {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='#000' width='15.36' height='15.36' viewBox='0 0 15.36 15.36'><path d='M.004 7.699l3.015-3.015 2.968 3.015-2.968 2.968L.004 7.699zm7.699 1.67l2.968 3.015-2.968 2.968-3.015-2.968 3.015-3.015zM4.688 3.015L7.703 0l2.968 3.015-2.968 2.968-3.015-2.968zm7.7 1.669l2.968 3.015-2.968 2.968-3.015-2.968 3.015-3.015z'/><path d='M.004 7.699l3.015-3.015 2.968 3.015-2.968 2.968L.004 7.699zm7.699 1.67l2.968 3.015-2.968 2.968-3.015-2.968 3.015-3.015zM4.688 3.015L7.703 0l2.968 3.015-2.968 2.968-3.015-2.968zm7.7 1.669l2.968 3.015-2.968 2.968-3.015-2.968 3.015-3.015z'/></svg>");
+    & .toe-cap:first-child {
+        padding: 0 0 0 0.5rem;
+    }
+      & :not(:first-child):before {
+        content: "\00B7";
+        padding: 0 0.5rem 0 0;
+    }
+  }
+  &.verification {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='#000' width='15.36' height='18.41' viewBox='0 0 15.36 18.41'><path d='M14.126 18.409H1.234c-.678 0-1.23-.527-1.23-1.174V1.175C.004.528.556.001 1.234.001h12.892c.678 0 1.23.526 1.23 1.174v16.06c0 .647-.552 1.174-1.23 1.174zM1.234.828c-.222 0-.404.156-.404.347v16.06c0 .192.182.347.404.347h12.892c.223 0 .403-.156.403-.347V1.175c0-.192-.18-.347-.403-.347H1.234z'/><path d='M11.127 3.456H2.742a.413.413 0 0 1 0-.826h8.385a.412.412 0 1 1 0 .826zM7.95 5.62H2.742a.413.413 0 0 1 0-.826H7.95a.414.414 0 1 1 0 .826zm3.177 2.164H2.742a.413.413 0 0 1 0-.826h8.385a.412.412 0 1 1 0 .826zM6.375 9.948H2.742a.412.412 0 1 1 0-.826h3.633a.413.413 0 0 1 0 .826zm.846 6.719a.41.41 0 0 1-.261-.093l-3.699-3.02a.412.412 0 0 1-.032-.61l.828-.837a.411.411 0 0 1 .55-.032L6.89 13.89l4.654-4.646a.414.414 0 0 1 .633.527l-4.616 6.718a.415.415 0 0 1-.282.175l-.058.003zm-3.085-3.465l2.999 2.448 1.829-2.662-1.75 1.747a.412.412 0 0 1-.548.031l-2.282-1.814-.248.25z'/></svg>");
+  }
+  &.protection {
+    @extend .w-25;
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='#000' width='15.36' height='18.41' viewBox='0 0 15.36 18.41'><path d='M6.466 17.556l.7.493.514.365.514-.365.7-.493c1.314-.923 2.668-1.876 3.755-2.91 1.616-1.543 2.367-2.997 2.367-4.604V2.684L7.68-.004.344 2.684v7.358c0 1.607.751 3.061 2.365 4.604 1.083 1.033 2.443 1.987 3.757 2.91zm-4.343-7.514V3.927L7.68 1.89l5.557 2.036v6.115c0 1.08-.578 2.134-1.816 3.317-.985.94-2.287 1.847-3.548 2.736l-.193.137-.191-.136c-1.26-.889-2.565-1.801-3.557-2.741-1.231-1.178-1.809-2.232-1.809-3.312z'/><path d='M11.772 6.832l-1.24-1.272-3.986 3.886-1.609-1.88-1.35 1.158 2.844 3.319z'/></svg>");
+    & .ppe {
+      width: 57px;
+    &.level-1 {
+      background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='#000' width='57' height='18.41' viewBox='0.18 0 57 18.41'><path fill='#333' d='M.18 8.705h12v2h-12z'/><path fill='#D6D6D6' d='M27.18 8.705h-12v2h12v-2m15 0h-12v2h12v-2m15 0h-12v2h12v-2'/></svg>");
+      background-repeat: no-repeat;
+    }
+    &.level-2 {
+      background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='#000' width='57' height='18.41' viewBox='0.18 0 57 18.41'><path fill='#333' d='M.18 8.705h12v2h-12zm27 0h-12v2h12v-2'/><path fill='#D6D6D6' d='M42.18 8.705h-12v2h12v-2m15 0h-12v2h12v-2'/></svg>");
+      background-repeat: no-repeat;
+    }
+    &.level-3 {
+      background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='#000' width='57' height='18.41' viewBox='0.18 0 57 18.41'><path fill='#333' d='M.18 8.705h12v2h-12zm27 0h-12v2h12v-2m15 0h-12v2h12v-2'/><path fill='#D6D6D6' d='M57.18 8.705h-12v2h12v-2'/></svg>");
+      background-repeat: no-repeat;
+    }
+    &.level-4 {
+      background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='#000' width='57' height='18.41' viewBox='0.18 0 57 18.41'><path d='M.18 8.705h12v2h-12zm27 0h-12v2h12v-2m15 0h-12v2h12v-2m15 0h-12v2h12v-2' fill='#333'/></svg>");
+      background-repeat: no-repeat;
+    }
+    }
+  }
+  }
+  & .iso {
+    padding: 0 .5rem;
+  }
+}
+
+.woocommerce-Reviews {
+  @include make-container();
+}
+.rating-review-info {
+  @include make-col(2);
+  //padding: $gutter;
+}
+.rating-review-content {
+  @include make-col(10);
+  //padding: $gutter;
+}
+
+.review-comment-content {
+  @include make-col(12);
+  //padding: $gutter;
+  font-size: .85rem;
+}
+.review-comment-date {
+  @include make-col(12);
+  padding: 0 $gutter / 2;
+  font-size: .65rem;
+  text-align: right;
+  padding: 3rem 1rem .5rem 1rem;
+}
+
+aside.sidebar {
+  & .panel-heading {
+    padding: 2rem 2rem 1rem 2rem;
+    & h2 {
+      font-family: 'ProximaNova-Bold';
+      font-size: .8rem;
+      text-transform: uppercase;
+      letter-spacing: .05rem;
+      & a {
+        padding: 1rem;
+      }
+    }
+    & .accordion-toggle:before {
+    /* symbol for "opening" panels */
+  //  font-family: 'Glyphicons Halflings';  /* essential for enabling glyphicon */
+    content: " ";    /* adjust as needed, taken from bootstrap.css */
+    float: left;        /* adjust as needed */
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='#{$carousel-control-color}' width='10' height='6' viewBox='0 0 10 6'><path fill='none' stroke='#000' stroke-width='1.213' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' d='M.641.61l4.261 4.78L9.405.61'/></svg>") ;         /* adjust as needed */
+    width: 10px;
+    height: 9px;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+}
+  & .panel-heading .accordion-toggle.collapsed:before {
+    /* symbol for "collapsed" panels */
+    content: " ";    /* adjust as needed, taken from bootstrap.css */
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='#{$carousel-control-color}' width='10' height='6' viewBox='0 0 10 6'><path fill='#FFF' d='M9.405 5.39L5.143.61.641 5.39'/><path fill='none' stroke='#000' stroke-width='1.213' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' d='M9.405 5.39L5.143.61.641 5.39'/></svg>") ;         /* adjust as needed */
+
+}
+
+  & .panel-collapse {
+    //padding: 0 2.7rem;
+    & .facetwp-facet {
+      padding: 0 3.6rem;
+      border-bottom: 1px solid $border-light-color;
+    }
+    & h3 {
+      font-family: 'ProximaNova-Regular';
+      font-size: .82rem;
+      letter-spacing: .025rem;
+    }
+    & span.facetwp-counter {
+      font-family: 'ProximaNova-Regular';
+      font-size: .72rem;
+      letter-spacing: .025rem;
+      opacity: .65;
+      line-height: 2.5;
+    }
+  }
+}
+
+nav.woocommerce-MyAccount-navigation {
+  @extend .nav;
+  @extend .nav-pills;
+  @extend .nav-justified;
+  & a.nav-link {
+    padding: 1.76rem 1rem;
+    border-radius: 0;
+    &.is-active {
+      background: $primary;
+      color: $white;
+  }
+}
+
+}

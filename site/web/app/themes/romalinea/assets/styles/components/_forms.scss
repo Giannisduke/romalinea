@@ -1,0 +1,117 @@
+// Search form
+.search-form {
+  @extend .form-inline;
+}
+.search-form label {
+  font-weight: normal;
+  @extend .form-group;
+}
+.search-form .search-field {
+  @extend .form-control;
+}
+.search-form .search-submit {
+  @extend .btn;
+  @extend .btn-secondary;
+}
+
+/* hide the blue outline */
+.form-control:focus {
+    outline: 0 !important;
+    border-color: initial;
+    box-shadow: none;
+}
+
+.form-rounded {
+border-radius: 1rem;
+border-color: $border-light-color;
+}
+
+
+.names {
+    margin-bottom: 0!important;
+  & .gfield_required {
+    display: none;
+  }
+  & div {
+    @extend .d-flex;
+    @extend .flex-row;
+    @extend .align-items-center;
+    border: 1px solid $border-light-color;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    & span {
+      padding: 1rem 0rem 0 1.5rem;
+      @include make-col(6);
+      & label {
+        font-family: 'PF Encore Sans Light';
+        font-size: .75rem;
+        letter-spacing: .05rem;
+      }
+    }
+    & span:nth-child(2) {
+      border-left: 1px solid $border-light-color;
+    }
+    & input {
+      border: 0!important;
+      padding: 0!important;
+    }
+  }
+}
+
+.message {
+  margin-bottom: 0!important;
+  & label {
+    display: none;
+  }
+  & textarea {
+    border: 1px solid $border-light-color;
+    border-top: 0;
+    border-radius: 0;
+    padding: 1rem 0 0 1.5rem;
+    font-family: 'PF Encore Sans Light';
+    font-size: .75rem;
+    letter-spacing: .05rem;
+    &:focus {
+    border: 1px solid $border-light-color!important;
+    border-top: 0!important;
+    }
+  }
+}
+
+#billing_address_2 {
+  margin-top: 2.5rem;
+}
+
+.buy_button_wrapper {
+  @extend .w-100;
+  padding: 0 0.9rem;
+}
+
+.woocommerce-checkout-review-order {
+  padding: 0 0.9rem 0 0rem;
+}
+
+/*unhide copuon code checkout*/
+.checkout_coupon {
+ display: block !important;
+}
+/*hide message have a coupon?*/
+.woocommerce-info {
+display:none;
+}
+/*coupon code checkout style*/
+.checkout_coupon button.button{
+background-color: $orange;
+}
+
+.woocommerce-checkout-review-order {
+  & .woocommerce-error {
+    margin: 0;
+    border-top: 0;
+    background-color: transparent;
+  }
+}
+
+form .checkout_form {
+  padding: 5rem 0 0rem 0;
+}

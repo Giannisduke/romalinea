@@ -1,0 +1,187 @@
+.carousel-fade .carousel-item {
+    max-height: 65vh;
+}
+
+.video-fluid {
+  width: 100%;
+  object-fit: fill;
+}
+
+.overlayText {
+ position:absolute;
+  top:50%;
+  //left:20%;
+  z-index:1;
+}
+
+#topText {
+  color: red;
+  font-size: 20px;
+  align-self: center;
+}
+
+.filters {
+  background: $white;
+  padding: 0;
+  border: 1px solid $border-color;
+  padding: 1rem;
+}
+
+.results {
+  background: $white;
+
+  border-top: 1px solid $border-color;
+  border-left: 1px solid $border-color;
+  border-right: 1px solid $border-color;
+  padding: 1rem;
+}
+
+.stick:first-child{
+  background: $light-color;
+  padding: 3rem 0 0 0;
+}
+
+.woocommerce-cart {
+  & .woocommerce-cart-form {
+    @include make-container($gutter: $grid-gutter-width)
+    & .cart_item {
+      @include make-row($gutter: $grid-gutter-width)
+    //  @include row-cols(6)
+      border-bottom: 1px solid $border-light-color;
+      & .product-thumbnail {
+        //width: 15%;
+        @extend .my-auto;
+        @include make-col(3);
+        & img {
+          float: right;
+          max-width: 50%;
+        }
+      }
+      & .product-name {
+        @extend .my-auto;
+        @include make-col(3);
+        & h3 {
+          font-family: 'PF Encore Sans Pro Medium';
+          font-size: 1.1875rem;
+          //transform: scaleY(1.25);
+          margin-bottom: 0;
+        }
+        & span.category {
+          font-family: 'PF Encore Sans Light';
+          font-size: .75rem;
+          text-transform: uppercase;
+          letter-spacing: .05rem;
+        }
+      }
+      & .product-price {
+        @extend .my-auto;
+        @extend .text-center;
+        @include make-col(1);
+      }
+      & .product-quantity {
+        @extend .my-auto;
+        @include make-col(1);
+        & .quantity {
+            border: 1px solid $border-light-color;
+            border-radius: 2rem;
+            padding: .5rem;
+            text-align: center;
+        }
+      }
+      & .product-subtotal {
+        @extend .my-auto;
+        @extend .text-center;
+        @include make-col(1);
+      }
+      & .product-remove {
+        @extend .my-auto;
+        @include make-col(2);
+        @extend .text-center;
+      }
+
+    }
+
+    & .cart_total {
+      @include make-row($gutter: $grid-gutter-width)
+      & .coupon_form {
+        @include make-col(6);
+        @extend .my-auto;
+        padding: 3rem 0;
+        & .coupon {
+          float: right;
+          & label {
+            display: none;
+          }
+        }
+      }
+      & .sum {
+        @include make-col(2);
+        @extend .text-right;
+        @extend .my-auto;
+      }
+      & .total {
+        @include make-col(1);
+        @extend .text-center;
+        @extend .my-auto;
+      }
+      & .sum_button{
+        @include make-col(2);
+        @extend .text-center;
+        @extend .my-auto;
+      }
+    }
+
+    & .product-subtotal, .total {
+
+      & bdi {
+        font-family: 'ProximaNova-Bold';
+        font-size: 1rem;
+        color: $orange;
+      }
+    }
+    & .update_cart {
+      border: 1px solid $border-light-color;
+      border-radius: 2rem;
+      padding: 1rem;
+    }
+    & tr.total {
+      height: 150px;
+    }
+  }
+  & .ico {
+      &.search {
+        height: 13.973px;
+        width: 17.274px;
+        background-image: url('../images/icon_reload.svg');
+        transform: translateY(16%);
+      }
+  }
+  & .cart-empty {
+    text-align: center;
+    padding: 4rem;
+    & h2 {
+      margin-bottom: 2.5rem;
+    }
+  }
+}
+
+.checkout_form {
+  @include make-row($gutter: $grid-gutter-width);
+}
+
+.woocommerce-variation-add-to-cart {
+  & span.pa {
+    font-size: .8rem;
+    margin: 0rem 0rem 0rem 1rem;
+  }
+}
+
+.woocommerce-product-details__short-description {
+  & p {
+    margin-top: 1rem;
+  }
+}
+
+.woocommerce-Tabs-panel {
+  padding: 2rem 6rem;
+}
