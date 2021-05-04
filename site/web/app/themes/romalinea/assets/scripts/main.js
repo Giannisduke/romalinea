@@ -48,8 +48,8 @@
             $('.facetwp-facet-price').parent().parent().parent().addClass('grey');
            }
 
-        $('li.breadcrumb-item:contains("Page")').remove();
-        $('li.breadcrumb-item:contains("Σελίδα")').remove();
+        $('div.breadcrumb-item:contains("Page")').remove();
+        $('div.breadcrumb-item:contains("Σελίδα")').remove();
         $('.facetwp-depth').hide();
         $('.facetwp-checkbox.checked').each(function() {
             $(this).parents('.facetwp-depth').show();

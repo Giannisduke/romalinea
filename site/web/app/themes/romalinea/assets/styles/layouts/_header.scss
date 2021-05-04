@@ -30,8 +30,8 @@ i.cart {
 }
 
 .bg-dark-color {
-  background-color: $dark-color;
-  border-bottom: 1px solid $border-dark-color;
+  background-color: $roma_white;
+  border-bottom: 1px solid $roma_grey;
 }
 
 .h-103 {
@@ -40,9 +40,9 @@ i.cart {
 
 header {
   & .breadcrumb-item {
-    color: $white;
+    color: $red;
     & a {
-      color: $white;
+      color: $red;
     }
   }
   & .dropdown-item {
@@ -55,7 +55,7 @@ header {
   }
   & ul.mr-auto {
     & .nav-item {
-      border-right: 1.5px solid $border-dark-color;
+      border-right: 1.5px solid $roma_grey;
       padding: .88rem 1.742rem;
 
       & .ico {
@@ -102,7 +102,7 @@ header {
 
   & ul.ml-auto {
     & .nav-item {
-      border-right: 1.5px solid $border-dark-color;
+      border-right: 1.5px solid $roma_grey;
       padding: .88rem 1.742rem;
       & bdi {
         color: $white;
@@ -160,26 +160,15 @@ header {
     }
 
   }
-
-
 }
 
 .home main {
   & .row {
-
     &:nth-of-type(1) {
       & .catalog {
-        margin-top: -10rem;
-        background: $white;
+        margin-top: 10rem;
+//        background: $white;
         z-index: 1000;
-        box-shadow:
-          0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-          0 6.7px 5.3px rgba(0, 0, 0, 0.048),
-          0 12.5px 10px rgba(0, 0, 0, 0.06),
-          0 22.3px 17.9px rgba(0, 0, 0, 0.072),
-          0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-          0 100px 80px rgba(0, 0, 0, 0.12)
-          ;
       }
     }
   }
@@ -189,21 +178,13 @@ header {
 .archive main {
   margin-top: 0;
   & .row {
-
     &:nth-of-type(1) {
       & .catalog {
         padding: 0;
-        margin-top: -5rem;
-        background: $white;
+        margin-top: 5rem;
+        //background: $white;
         z-index: 1000;
-        box-shadow:
-          0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-          0 6.7px 5.3px rgba(0, 0, 0, 0.048),
-          0 12.5px 10px rgba(0, 0, 0, 0.06),
-          0 22.3px 17.9px rgba(0, 0, 0, 0.072),
-          0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-          0 100px 80px rgba(0, 0, 0, 0.12)
-          ;
+
       }
     }
   }
@@ -217,16 +198,10 @@ header {
     &:nth-of-type(1) {
       & .catalog {
         padding: 0;
-        margin-top: -5rem;
-        background: $white;
+        margin-top: 5rem;
+//        background: $white;
         z-index: 1000;
-        box-shadow:
-          0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-          0 6.7px 5.3px rgba(0, 0, 0, 0.048),
-          0 12.5px 10px rgba(0, 0, 0, 0.06),
-          0 22.3px 17.9px rgba(0, 0, 0, 0.072),
-          0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-          0 100px 80px rgba(0, 0, 0, 0.12);
+
       }
     }
   }
@@ -239,17 +214,9 @@ header {
     &:nth-of-type(1) {
       & .catalog {
         padding: 0;
-        margin-top: -5rem;
-        background: $white;
+        margin-top: 5rem;
+        //background: $white;
         z-index: 1000;
-        box-shadow:
-          0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-          0 6.7px 5.3px rgba(0, 0, 0, 0.048),
-          0 12.5px 10px rgba(0, 0, 0, 0.06),
-          0 22.3px 17.9px rgba(0, 0, 0, 0.072),
-          0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-          0 100px 80px rgba(0, 0, 0, 0.12)
-          ;
       }
     }
   }
@@ -292,7 +259,7 @@ header.banner .overlay {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: $dark-color;
+  background-color: $roma_white;
   opacity: 0.95;
   z-index: 1;
 }
@@ -309,9 +276,9 @@ header.banner .overlay {
 .products-header {
   margin-top: 5rem;
   text-align: center;
-  padding: 4rem 0 4rem;
+  padding: 0;
   & h1 {
-    color: $white;
+    color: $red;
     font-family: 'PF Encore Sans Bold';
     font-size: 1.2rem;
     text-transform: uppercase;

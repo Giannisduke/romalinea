@@ -34,6 +34,7 @@ $cards-per-line: (
 
 $font-family-base: 'ProximaNova-Regular';
 $body-bg: #f9f9f9;
+$roma_grey: #d9dade;
 $light-color:  #f8f8f8;
 $light-color-heading:  #bcbcbc;
 $light-color-text-dark:  #898989;
@@ -43,6 +44,7 @@ $black: #111111;
 $border-dark-color:  #555555;
 $border-light-color:  #e7e7e7;
 $white: #fff;
+$roma_white: #f2f2f2;
 $grey: #f7f7f7;
 $yellow: #ffb600;
 $orange: #ff5a00;
@@ -110,10 +112,10 @@ $navbar-brand-padding-y: 0;
 
 $woocommerce:   	#a46497 !default;
 $green:         	#7ad03a !default;
-$red:           	#a00 !default;
+$red:           	#ed1c24 !default;
 $blue:          	#2ea2cc !default;
 
-$primary:           $dark-color !default;                                    // Primary color for buttons (alt)
+$primary:           $roma_white !default;                                    // Primary color for buttons (alt)
 $primarytext:       desaturate(lighten($primary, 50%), 18%) !default;    // Text on primary color bg
 
 $secondary:         desaturate(lighten($primary, 40%), 21%) !default;    // Secondary buttons
@@ -141,3 +143,5 @@ $btn-padding-x-md: 1.5rem;
 $btn-font-size-md: 1rem;
 $btn-line-height-md: 1.5;
 $btn-border-radius-md: 2.3rem;
+
+$breadcrumb-bg:   transparent;

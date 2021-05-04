@@ -11,8 +11,9 @@
 
 <?php //do_action('prosilos_custom_front'); ?>
   <div class="row">
-    <div class="container catalog">
+    <div class="container catalog test">
 
           <?php do_action( 'prosilos_front' ); ?>
+      
     </div>
   </div>

@@ -340,7 +340,7 @@ function sxhma_front_services(){ ?>
 
 <? }
 
-add_action('prosilos_front', 'sxhma_front_services', 2);
+//add_action('prosilos_front', 'sxhma_front_services', 2);
 
 
 function sales_timer_countdown_product() {
@@ -432,6 +432,13 @@ function prosilos_front_shop_sale(){ ?>
 add_action('prosilos_front', 'prosilos_front_shop_sale', 5);
 
 function prosilos_front_shop(){  ?>
+  <div class="row">
+    <div class="col-3">
+  <div class="panel-group" id="accordion">
+  	  <?php dynamic_sidebar( 'sidebar-primary' ); ?>
+  		</div>
+      </div>
+      <div class="col-3">
   <ul itemscope itemtype="https://schema.org/ItemList" class="facetwp-template">
      <li class="popular">
        <div class="card">
@@ -459,7 +466,8 @@ function prosilos_front_shop(){  ?>
   		wp_reset_postdata();
   	?>
 </ul>
-
+</div>
+</div>
 
 <?php  echo facetwp_display( 'facet', 'load_more' ); ?>
 
@@ -738,11 +746,11 @@ add_filter( 'woocommerce_breadcrumb_defaults', 'jk_woocommerce_breadcrumbs' );
 function jk_woocommerce_breadcrumbs() {
 return array(
         'delimiter'   => '',
-        'wrap_before' => '<ol class="breadcrumb justify-content-center facetwp-selections">',
+        'wrap_before' => '<div class="d-flex justify-content-left facetwp-selections">',
         'wrap_after' => '',
-        'before'      => '<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item">',
-        'after'       => '</li>',
-        'home'        => _x( 'Home', 'breadcrumb', 'woocommerce' ),
+        'before'      => '<div itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item">',
+        'after'       => '</div>',
+    //    'home'        => _x( 'Home', 'breadcrumb', 'woocommerce' ),
     );
 }
 
@@ -815,7 +823,7 @@ function archive_products_header() { ?>
   	// do something for product categories with ID = 5 or 10 or 891
     $term_object = get_queried_object();
 ?>
-<header class="products-header grey">
+<header class="products-header">
 		<h1 class="woocommerce-products-header__title page-title"><?php echo $term_object->description; ?></h1>
     <?php echo facetwp_display( 'selections' ); ?>
 </header>
@@ -840,12 +848,12 @@ foreach ($terms as $term){
     break;
 }
 if (get_ancestors($product_cat_id, 'product_cat') == false){ ?>
-  <header class="products-header grey">
+  <header class="products-header">
       <h1 class="woocommerce-products-header__title page-title"><?php echo $product_cat_description; ?></h1>
       <?php echo facetwp_display( 'selections' ); ?>
   </header>
  <?php } else { ?>
-  <header class="products-header grey">
+  <header class="products-header">
   		<h1 class="woocommerce-products-header__title page-title"><?php echo $parent_categories_description[$category->slug]; ?></h1>
       <?php echo facetwp_display( 'selections' ); ?>
   </header>
@@ -866,15 +874,15 @@ if (get_ancestors($product_cat_id, 'product_cat') == false){ ?>
           return $crumbs;
       }, 10, 2 );
   ?>
-  <header class="products-header grey">
+  <header class="products-header">
   		<h1 class="woocommerce-products-header__title page-title"><?php echo get_the_title( $shop_page_id ); ?></h1>
-      <?php echo facetwp_display( 'selections' ); ?>
+
   </header>
 
 <?php } elseif( is_page() ) {
   global $post;
   ?>
-  <header class="products-header grey">
+  <header class="products-header">
       <h1 class="woocommerce-products-header__title page-title"><?php echo strip_shortcodes($post->post_excerpt); ?></h1>
       <?php echo facetwp_display( 'selections' ); ?>
   </header>
@@ -930,18 +938,7 @@ foreach ($terms as $term){
    // is Child
    ?>
 <h2 class="cat" itemprop="category"><a href="<?php echo $product_cat_url; ?>"><?php echo $product_cat_name; ?></a></h2>
-<?php if( ! empty( $features_terms ) ){ ?>
-<span class="fetures">
-<?php foreach ($features_terms as $term) :
 
-	//	$product_protypo_url = get_permalink(wc_get_page_id('shop')) . '?_eu_prototype=' . $term->slug;
-		$protypo_name = $term->name;
-		echo '<h2 class="iso"><a href="#">' . $protypo_name . '</a></h2>';
-
-endforeach;
-} else {
-    // No product attribute is set for this product
-} ?>
 <?php } ?>
 </div>
 <?php }

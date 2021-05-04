@@ -44,6 +44,7 @@ function prosilos_brands_taxonomy() {
 		'capabilities'               => $capabilities,
 		'show_in_rest'               => true,
     'rewrite'           => ['slug' => 'brands'],
+		'supports' => array( 'thumbnail' ),
     'query_var'             => true,
 	);
 	register_taxonomy( 'brands', array( 'product' ), $args );
@@ -71,6 +72,20 @@ function wsis_dequeue_stylesandscripts_select2() {
       //  wp_dequeue_script( 'selectWoo');
       //  wp_deregister_script('selectWoo');
     }
+}
+
+/**
+ * Remove shop from breadcrumb
+ */
+add_filter( 'woocommerce_get_breadcrumb', 'remove_shop_crumb', 20, 2 );
+function remove_shop_crumb( $crumbs, $breadcrumb ){
+    foreach( $crumbs as $key => $crumb ){
+        if( $crumb[0] === __('Shop', 'Woocommerce') ) {
+            unset($crumbs[$key]);
+        }
+    }
+
+    return $crumbs;
 }
 
 /**
@@ -402,7 +417,7 @@ endforeach;
 }?>
 </span>
 <?php }
-add_action ('prosilos_attributes', 'prosilos_attributes_verifivation', 10 );
+//add_action ('prosilos_attributes', 'prosilos_attributes_verifivation', 10 );
 
 function prosilos_attributes_protection() {
   global $post;
@@ -422,7 +437,7 @@ endforeach;
 }?>
 </span>
 <?php }
-add_action ('prosilos_attributes', 'prosilos_attributes_protection', 20 );
+//add_action ('prosilos_attributes', 'prosilos_attributes_protection', 20 );
 
 
 

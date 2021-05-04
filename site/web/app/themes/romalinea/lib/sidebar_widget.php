@@ -20,7 +20,8 @@ class Sidebarfilters_Widget extends WP_Widget {
 				'price',
 				'eu_prototype',
 				'ppe_protection',
-				'product_tags'
+				'product_tags',
+				'product_color'
 			),
 		),
 	);

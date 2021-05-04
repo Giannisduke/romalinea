@@ -34,15 +34,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 </aside>
 <div class="mainbar">
-	<div class="heading">
-		<div class="col-4">
-		<?php echo facetwp_display( 'sort' ); ?>
-	</div>
-	<div class="col-4">
-	<?php echo facetwp_display( 'facet', 'new_pager' ); ?>
-</div>
-<div class="col-4">
+	<div class="d-flex flex-row">
 
+
+<?php echo facetwp_display( 'selections' ); ?>
+
+		<div class="w-50">
+				<?php echo facetwp_display( 'facet', 'product_search' ); ?>
+	</div>
+<div class="ml-auto w-25">
+<?php echo facetwp_display( 'sort' ); ?>
 </div>
 	</div>
 	<ul itemscope itemtype="https://schema.org/ItemList" class="facetwp-template">
