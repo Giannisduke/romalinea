@@ -87,7 +87,7 @@ class FacetWP_Display
             $output = '<div class="facetwp-sort"></div>';
         }
         elseif ( isset( $atts['selections'] ) ) {
-            $output = woocommerce_breadcrumb() .'</div>';
+            $output = '<div class="facetwp-selections"></div>';
         }
         elseif ( isset( $atts['counts'] ) ) {
             $this->active_extras['counts'] = true;

@@ -37,7 +37,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div class="d-flex flex-row">
 
 
-<?php //echo facetwp_display( 'selections' ); ?>
+<?php echo facetwp_display( 'selections' ); ?>
 
 		<div class="w-50">
 				<?php echo facetwp_display( 'facet', 'product_search' ); ?>

@@ -608,17 +608,17 @@ window.FWP = window.FWP || {};
 
                     var values = '';
                     $.each(choices, function(idx, choice) {
-                        values += '<div itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem" class="breadcrumb-item facetwp-selection-value" data-value="' + choice.value + '"><a href="#" >' + FWP.helper.escape_html(choice.label) + '</a></div>';
+                        values += '<button type="button" class="btn btn-primary btn-sm facetwp-selection-value" data-value="' + choice.value + '">' + FWP.helper.escape_html(choice.label) + '<i class="close"></i></button>';
                     });
 
-                    selections += '' + values + '';
+                    selections += '<li data-facet="' + key + '">' + values + '</li>';
                 });
 
                 if ('' !== selections) {
-                    selections = selections ;
+                    selections = '<ul>' + selections + '</ul>';
                 }
-                $('.facetwp-selection-value').remove();
-                $('.facetwp-selections').append(selections);
+
+                $('.facetwp-selections').html(selections);
             });
         }
 
@@ -634,7 +634,7 @@ window.FWP = window.FWP || {};
             if ('' != facet_value) {
                 var obj = {};
                 obj[facet_name] = facet_value;
-               FWP.reset(obj);
+                FWP.reset(obj);
             }
             else {
                 FWP.reset(facet_name);
