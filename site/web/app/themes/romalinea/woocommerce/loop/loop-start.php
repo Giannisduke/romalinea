@@ -34,7 +34,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 </aside>
 <div class="mainbar">
-	<div class="d-flex flex-row test">
+	<div class="d-flex flex-row">
 
 
 <?php //echo facetwp_display( 'selections' ); ?>
