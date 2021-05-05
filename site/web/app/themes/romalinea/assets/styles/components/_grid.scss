@@ -78,7 +78,7 @@ offers {
       @extend .row;
       margin-bottom: 0rem;
       & li {
-        @include make-col(4);
+      //  @include make-col(6);
         &.product {
           & .col {
             padding: .4rem 4.5rem 2rem 4.5rem;
