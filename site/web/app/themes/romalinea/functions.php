@@ -1060,3 +1060,37 @@ if(get_field('contact_form')):
   <?php endif;
 }
 add_action( 'prosilos_get_contact', 'prosilos_get_contact_info', 10 );
+
+add_filter( 'woocommerce_product_get_price' , 'products_custom_price' , 5, 2 );
+function products_custom_price( $price, $product ){
+  $current_user = wp_get_current_user();
+  $current_user_maestri_discount = get_field('maestri_discount', 'user_' . $current_user->ID);
+  $current_user_office_point_discount = get_field('office_point_discount', 'user_' . $current_user->ID);
+  $current_user_keyroad_discount = get_field('keyroad_discount', 'user_' . $current_user->ID);
+  $current_user_enlegend_discount = get_field('enlegend_discount', 'user_' . $current_user->ID);
+
+   if ( has_term( 'maestri', 'brands' )  ) {
+      return $price - ($price*$current_user_maestri_discount)/100;
+    } elseif ( has_term( 'office-point', 'brands' )  ) {
+      return $price - ($price*$current_user_office_point_discount)/100;
+    }
+   elseif ( has_term( 'keyroad', 'brands' )  ) {
+       return $price - ($price*$current_user_keyroad_discount)/100;
+    }
+    elseif ( has_term( 'enlegend', 'brands' )  ) {
+        return $price - ($price*$current_user_enlegend_discount)/100;
+     }
+}
+
+add_filter( 'woocommerce_product_variation_get_price' , 'variation_custom_price' , 99, 2 );
+function variation_custom_price( $price, $variation ){
+        //Apply Discount by matching the parent Product
+       $product = wc_get_product($variation->get_parent_id());
+       if( '20' == $product->get_id() ){
+             return $price - $discount;
+       }
+       //Apply Discount by matching the Product Variation
+       if( '20' == $variation->get_id() ){
+             return $price - $discount;
+       }
+}
