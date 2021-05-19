@@ -295,7 +295,7 @@ add_action ('woocommerce_after_shop_loop', 'prosilos_pagination', 20 );
   global $product;
   if( $product->is_type( 'simple' ) ){
    // do something ?>
-  <div class="row test">
+  <div class="row">
   <?php } elseif( $product->is_type( 'variable' ) ){
    // do something
   } elseif( $product->is_type( 'external' ) ){

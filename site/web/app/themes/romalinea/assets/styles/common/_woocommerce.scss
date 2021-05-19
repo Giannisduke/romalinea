@@ -132,7 +132,7 @@ p.demo_store,
 			@extend .align-items-start;
 			h2 {
 					font-size: .8rem;
-					text-transform: uppercase;
+				//	text-transform: uppercase;
 					font-family: 'PF Encore Sans Pro Book';
 					letter-spacing: .09rem;
 					&.brand {
@@ -444,7 +444,7 @@ p.demo_store,
 		}
 
 		form.cart {
-			margin-bottom: 2em;
+			margin-bottom: 1rem;
 
 			@include clearfix();
 
