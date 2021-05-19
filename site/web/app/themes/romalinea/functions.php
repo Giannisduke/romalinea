@@ -942,7 +942,7 @@ foreach ($terms as $term){
 <?php } ?>
 </div>
 <?php }
-add_action ('prosilos_product_description', 'prosilos_get_product_cat', 10 );
+add_action ('prosilos_product_description', 'prosilos_get_product_cat', 25 );
 
 function prosilos_get_product_cat_name() {
   global $product;
@@ -979,7 +979,7 @@ function prosilos_get_brand() {
  ?>
 </div>
 <?php }
-add_action ('prosilos_product_description', 'prosilos_get_brand', 20 );
+add_action ('prosilos_product_description', 'prosilos_get_brand', 10 );
 
 
 function bbloomer_single_product_type() {
