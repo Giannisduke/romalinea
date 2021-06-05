@@ -39,6 +39,30 @@ i.cart {
 }
 
 header {
+  & .form-inline {
+    width: 50%;
+    & input {
+    //  width: 100%;
+    }
+  }
+  & .facetwp-type-search {
+    @extend .w-100;
+    & input {
+      @extend .w-100;
+    }
+  }
+  & nav {
+    & ul {
+      &.menu {
+        @extend .nav;
+        @extend .navbar-nav;
+        @extend .d-inline-flex;
+        & li {
+          @extend .list-inline-item;
+        }
+      }
+    }
+  }
   & .bg-light {
     background-color: #f2f2f2!important;
     border-bottom: 1px solid $roma_grey;
@@ -58,113 +82,7 @@ header {
     width: 110px;
     padding: 1rem;
   }
-  & ul.mr-auto {
-    & .nav-item {
-      border-right: 1.5px solid $roma_grey;
-      padding: .88rem 1.742rem;
 
-      & .ico {
-          background-size: cover;
-          top: 38%;
-        //  transform: translateY(-50%);
-          transform: translateX(-50%);
-          display: inline-block;
-          position: absolute;
-
-          &.search {
-            height: 18px;
-            width: 18px;
-            background-image: url(../images/ico-search.svg);
-          }
-          &.shop {
-            height: 18px;
-            width: 18px;
-            background-image: url(../images/icon_shop.svg);
-          }
-          &.hum {
-            height: 20px;
-            width: 20px;
-            background-image: url(../images/ico-hum.svg);
-          }
-      }
-      & .btn.categories {
-        text-align: left;
-        padding-right: 3rem;
-        font-size: .8rem;
-      }
-      & span.category {
-        position: relative;
-        left: 2.5rem;
-        color: $white;
-        &:nth-of-type(2) {
-          font-family: 'ProximaNova-Bold';
-          font-size: .9rem;
-        }
-      }
-    }
-
-  }
-
-  & ul.ml-auto {
-    & .nav-item {
-      border-right: 1.5px solid $roma_grey;
-      padding: .88rem 1.742rem;
-      & bdi {
-        color: $white;
-        font-family: 'ProximaNova-Bold';
-        font-size: 1rem;
-      }
-      & .ico {
-          background-size: cover;
-          top: 38%;
-        //  transform: translateY(-50%);
-          transform: translateX(-50%);
-          display: inline-block;
-          position: absolute;
-
-          &.search {
-            height: 18px;
-            width: 18px;
-            background-image: url(../images/ico-search.svg);
-          }
-          &.shop {
-            height: 20px;
-            width: 20px;
-            background-image: url(../images/icon_shop.svg);
-          }
-          &.hum {
-            height: 20px;
-            width: 20px;
-            background-image: url(../images/ico-hum.svg);
-          }
-          &.cart {
-            height: 20px;
-            width: 23px;
-            background-image: url(../images/icon_add_big.svg);
-          }
-          &.profile {
-            height: 20px;
-            width: 23px;
-            background-image: url(../images/icon_profile.svg);
-          }
-      }
-      & .btn.categories {
-        text-align: right;
-        //padding-right: 3rem;
-        font-size: .8rem;
-      }
-      & span.category {
-        position: relative;
-        right: 1.5rem;
-        color: $white;
-        &:nth-of-type(2) {
-          font-family: 'ProximaNova-Bold';
-          font-size: .9rem;
-        }
-      }
-    }
-
-  }
 }
 
 .home main {

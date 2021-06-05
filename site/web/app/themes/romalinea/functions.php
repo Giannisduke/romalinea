@@ -69,7 +69,7 @@ function prefix_modify_nav_menu_args( $args ) {
         'walker' => new WP_Bootstrap_Navwalker(),
     ) );
 }
-add_filter( 'wp_nav_menu_args', 'prefix_modify_nav_menu_args' );
+//add_filter( 'wp_nav_menu_args', 'prefix_modify_nav_menu_args' );
 
 ####################################################
 #    Woocommerce remove css
@@ -874,7 +874,7 @@ if (get_ancestors($product_cat_id, 'product_cat') == false){ ?>
           return $crumbs;
       }, 10, 2 );
   ?>
-  <header class="products-header">
+  <header class="products-header test">
   		<h1 class="woocommerce-products-header__title page-title"><?php echo get_the_title( $shop_page_id ); ?></h1>
 
   </header>

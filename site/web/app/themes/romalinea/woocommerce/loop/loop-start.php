@@ -39,9 +39,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <?php echo facetwp_display( 'selections' ); ?>
 
-		<div class="w-50">
-				<?php echo facetwp_display( 'facet', 'product_search' ); ?>
-	</div>
+
 <div class="ml-auto w-25">
 <?php echo facetwp_display( 'sort' ); ?>
 </div>
