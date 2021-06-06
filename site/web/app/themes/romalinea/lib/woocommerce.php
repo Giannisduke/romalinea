@@ -159,7 +159,6 @@ function my_wc_hide_in_stock_message( $html, $product ) {
 	return $html;
 }
 
-
 /**
  * Show cart contents / total Ajax
  */
@@ -167,28 +166,25 @@ add_filter( 'woocommerce_add_to_cart_fragments', 'woocommerce_header_add_to_cart
 
 function woocommerce_header_add_to_cart_fragment( $fragments ) {
 	global $woocommerce;
-  $cart_icon = '<i class="ico cart">&nbsp;</i>';
+
 	ob_start();
 
 	?>
 
-	<a class="nav-link btn btn-sm categories customlocation" href="<?php echo esc_url(wc_get_cart_url()); ?>" title="<?php _e('View your shopping cart', 'prosilos'); ?>">
+	<li class="menu-item menu-cart">
+		<a href="<?php echo esc_url(wc_get_cart_url()); ?>" title="<?php _e('View your shopping cart', 'woothemes'); ?>">
+			<span>
+				<?php echo sprintf(_n('%d item', '%d items', $woocommerce->cart->cart_contents_count, 'woothemes'), $woocommerce->cart->cart_contents_count);?>
+			</span>
+			</br>
+			<?php echo $woocommerce->cart->get_cart_total(); ?><?php echo get_woocommerce_currency_symbol(); ?>
+		</a>
 
-		<span class="category">
-			<?php echo sprintf(_n('%d item', '%d items', $woocommerce->cart->cart_contents_count, 'prosilos'), $woocommerce->cart->cart_contents_count);?>
-		</span>
-		<br>
-		<span class="category">
-		 <?php echo $woocommerce->cart->get_cart_total(); ?>
-		 </span>
-		 <?php echo $cart_icon ?>
-	</a>
-
-  <?php
-	$fragments['a.nav-link.btn.btn-sm.categories.customlocation'] = ob_get_clean();
+</li>
+	<?php
+	$fragments['li.menu-item.menu-cart'] = ob_get_clean();
 	return $fragments;
 }
-
 
 /**
  * @snippet       Plus Minus Quantity Buttons @ WooCommerce Single Product Page

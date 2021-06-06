@@ -53,8 +53,16 @@ function filter_function_name_5115( $content, $instance, $args ){
 }
 //add_filter( 'widget_custom_html_content', 'filter_function_name_5115', 10, 3 );
 
+function add_active_class($classes, $item) {
+  $class_names = array( 'current-menu-item', 'current-menu-ancestor', 'current-menu-parent', 'current_page_parent',  'current_page_ancestor' );
 
+  if( $item->menu_item_parent == 0 && in_array( $class_names, $classes) ) {
+    $classes[] = "active";
+  }
 
+  return $classes;
+}
+add_filter('nav_menu_css_class', 'add_active_class', 10, 2 );
 
 function add_widget_name_id($params) {
 

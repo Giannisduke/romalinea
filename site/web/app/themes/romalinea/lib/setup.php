@@ -35,7 +35,10 @@ function setup() {
   // Register wp_nav_menu() menus
   // http://codex.wordpress.org/Function_Reference/register_nav_menus
   register_nav_menus([
-    'primary_navigation' => __('Primary Navigation', 'prosilos')
+    'top_left' => __('Top Left', 'prosilos')
+  ]);
+  register_nav_menus([
+    'top_right' => __('Top Right', 'prosilos')
   ]);
   register_nav_menus([
     'footer_nav_1' => __('Footer Navigation 1', 'prosilos')
