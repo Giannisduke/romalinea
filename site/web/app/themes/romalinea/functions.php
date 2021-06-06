@@ -826,77 +826,90 @@ function assign_parent_terms($post_id, $post){
 }
 
 
-function archive_products_header() { ?>
-<?php if( is_product_category() ) {
-  	// do something for product categories with ID = 5 or 10 or 891
-    $term_object = get_queried_object();
-?>
-<header class="products-header">
-		<h1 class="woocommerce-products-header__title page-title"><?php echo $term_object->description; ?></h1>
-    <?php echo facetwp_display( 'selections' ); ?>
-</header>
 
-<?php } elseif( is_product() ) {
-  global $post;
-$terms = get_the_terms( $post->ID, 'product_cat' );
+####################################################
+#    VIDEO
+####################################################
 
-foreach ($terms as $term){
-    $product_cat_id = $term->term_id;
-    $product_cat_name = $term->name;
-    $product_cat_description = $term->description;
-    $parent_categories_ids = get_ancestors($product_cat_id, 'product_cat');
-    foreach($parent_categories_ids as $category_id) {
-   // Now we retrieve the details of each category, using its
-   // ID, and extract its name
-  // $this_category = get_category($cat);
-   $category = get_term_by('id', $category_id, 'product_cat');
-   $parent_categories[$category->slug] = $category->name;
-   $parent_categories_description[$category->slug] = $category->description;
- }
-    break;
+function loukia_front_carousel(){
+  if ( is_shop() ){
+		$page_id = get_option( 'woocommerce_shop_page_id' );
+	}
+	else {
+		$page_id = get_the_ID();
+	}
+        if( have_rows('carousel', $page_id) ):$counter = 0;?>
+        <!--Carousel Section-->
+      <section class="hero">
+        <!--Carousel Wrapper-->
+        <div id="video-carousel" class="carousel slide carousel-fade home-section" data-interval="false">
+          <!--Slides-->
+          <div class="carousel-inner" role="listbox">
+                <?php while( have_rows('carousel', $page_id) ): the_row();
+                  //  $slide_title = get_sub_field('slide_title');
+                  //  $slide_subtitle = get_sub_field('slide_subtitle');
+                    $slide_text = get_sub_field('slide_text', $page_id);
+                    $slide_image = get_sub_field('slide_image_background', $page_id);
+
+                  //  $slide_video = get_sub_field('slide_video');
+                    $slide_external_video = get_sub_field('slide_external_video');
+                    ?>
+                    <div class="carousel-item <?php if($counter === 0){ echo "active";} ?>" data-slide-no="<?php echo $counter;?>" style="background: url('<?php echo $slide_image;?>') no-repeat center; background-size: cover;">
+                      <div class="carousel-caption d-none d-md-block">
+
+                            <?php  if (get_sub_field('slide_text' )) { ?>
+                              <div class="container">
+                        <?php echo $slide_text;?>
+                              <?php  } ?>
+                              </div>
+                            </div>
+                      <?php if (get_sub_field('slide_external_video' ))  { ?>
+                        <div class="overlay-div"></div>
+                        <video class="video-fluid" controls="top" controlsList="nofullscreen nodownload noremoteplayback" id="player" preload="auto" playsinline muted autoplay="true" loop="true">
+                            <source src="<?php echo $slide_external_video;?>"  />
+                        </video>
+                      <?php } else if (get_sub_field('slide_video' )) { ?>
+                        <video class="video-fluid" controls="top" controlsList="nofullscreen nodownload noremoteplayback" id="player" preload="auto" playsinline muted autoplay="true" loop="true">
+                            <source src="<?php echo $slide_video;?>"  />
+                        </video>
+                        <?php  } ?>
+                    </div>
+                    <?php $counter++; endwhile; ?>
+                      </div> <!--/.Slides-->
+                      <a class="carousel-control-prev" href="#video-carousel" role="button" data-slide="prev">
+                       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                       <span class="sr-only">Previous</span>
+                     </a>
+                     <a class="carousel-control-next" href="#video-carousel" role="button" data-slide="next">
+                       <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                       <span class="sr-only">Next</span>
+                     </a>
+                    </div> <!--Carousel Wrapper-->
+        <?php endif; ?>
+      </section>
+<?php
 }
-if (get_ancestors($product_cat_id, 'product_cat') == false){ ?>
-  <header class="products-header">
-      <h1 class="woocommerce-products-header__title page-title"><?php echo $product_cat_description; ?></h1>
-      <?php echo facetwp_display( 'selections' ); ?>
-  </header>
- <?php } else { ?>
-  <header class="products-header">
-  		<h1 class="woocommerce-products-header__title page-title"><?php echo $parent_categories_description[$category->slug]; ?></h1>
-      <?php echo facetwp_display( 'selections' ); ?>
-  </header>
-<?php }
-  ?>
+add_action('woocommerce_before_main_content', 'loukia_front_carousel', 5);
 
-<?php } elseif( is_shop() )  {
-  $shop_page_id = wc_get_page_id( 'shop' );
-  add_filter( 'woocommerce_get_breadcrumb', function($crumbs, $Breadcrumb){
-          $shop_page_id = wc_get_page_id('shop'); //Get the shop page ID
-          if($shop_page_id > 0 && !is_shop()) { //Check we got an ID (shop page is set). Added check for is_shop to prevent Home / Shop / Shop as suggested in comments
-              $new_breadcrumb = [
-                  get_the_title(wc_get_page_id('shop')), //Title
-                  get_permalink(wc_get_page_id('shop')) // URL
-              ];
-              array_splice($crumbs, 1, 0, [$new_breadcrumb]); //Insert a new breadcrumb after the 'Home' crumb
-          }
-          return $crumbs;
-      }, 10, 2 );
-  ?>
-  <header class="products-header test">
-  		<h1 class="woocommerce-products-header__title page-title"><?php echo get_the_title( $shop_page_id ); ?></h1>
 
-  </header>
+function test_acf() {
+  if( have_rows('carousel') ):
+    while ( have_rows('carousel') ) : the_row();
+        $sub_value = get_sub_field('slide_text');
+        // Do something...
+        echo $sub_value;
+    endwhile;
+else :
+    // no rows found
+    $sub_value = get_sub_field('slide_text');
+    echo 'Nothing';
+    echo '<pre>';
+	var_dump( $sub_value );
+echo '</pre>';
+endif;
 
-<?php } elseif( is_page() ) {
-  global $post;
-  ?>
-  <header class="products-header">
-      <h1 class="woocommerce-products-header__title page-title"><?php echo strip_shortcodes($post->post_excerpt); ?></h1>
-      <?php echo facetwp_display( 'selections' ); ?>
-  </header>
-<?php }
 }
-add_action ('prosilos_archive_products', 'archive_products_header', 10);
+//add_action('woocommerce_before_main_content', 'test_acf', 2);
 
 
 function product_open() { ?>
