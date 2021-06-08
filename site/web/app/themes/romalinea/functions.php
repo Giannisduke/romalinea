@@ -857,10 +857,17 @@ function loukia_front_carousel(){
                     <div class="carousel-item <?php if($counter === 0){ echo "active";} ?>" data-slide-no="<?php echo $counter;?>" style="background: url('<?php echo $slide_image;?>') no-repeat center; background-size: cover;">
                       <div class="carousel-caption d-none d-md-block">
 
-                            <?php  if (get_sub_field('slide_text' )) { ?>
-                              <div class="container">
+                            <?php  if (get_sub_field('slide_text', $page_id)) { ?>
+                              <div class="container h-100">
+                                <div class="row h-75">
+                                  <div class="col">
                         <?php echo $slide_text;?>
                               <?php  } ?>
+                                  </div>
+                                </div>
+                                <div class="row h-25">
+                                  test
+                                </div>
                               </div>
                             </div>
                       <?php if (get_sub_field('slide_external_video' ))  { ?>
