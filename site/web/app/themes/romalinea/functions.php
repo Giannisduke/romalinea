@@ -840,7 +840,7 @@ function loukia_front_carousel(){
 	}
         if( have_rows('carousel', $page_id) ):$counter = 0;?>
         <!--Carousel Section-->
-      <section class="hero collapse" id="herocollapse" >
+      <section class="hero collapse show" id="herocollapse" >
         <!--Carousel Wrapper-->
         <div id="video-carousel" class="carousel slide carousel-fade home-section" data-interval="false">
           <!--Slides-->
@@ -866,15 +866,6 @@ function loukia_front_carousel(){
                               <?php  } ?>
                                   </div>
                                 </div>
-
-                                  <div class="row p-4">
-                                    <div class="col">
-                                      <a class="btn btn-primary" data-toggle="collapse" href="#herocollapse" role="button" aria-expanded="false" aria-controls="herocollapse">
-                                        Link with href
-                                      </a>
-                                    </div>
-                                  </div>
-
                               </div>
                             </div>
 

@@ -611,11 +611,11 @@ window.FWP = window.FWP || {};
                         values += '<button type="button" class="btn btn-primary btn-sm facetwp-selection-value" data-value="' + choice.value + '">' + FWP.helper.escape_html(choice.label) + '<i class="close"></i></button>';
                     });
 
-                    selections += '<li data-facet="' + key + '">' + values + '</li>';
+                    selections += '<span data-facet="' + key + '">' + values + '</span>';
                 });
 
                 if ('' !== selections) {
-                    selections = '<ul>' + selections + '</ul>';
+                    selections = '<div>' + selections + '</div>';
                 }
 
                 $('.facetwp-selections').html(selections);

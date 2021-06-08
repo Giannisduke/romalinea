@@ -68,7 +68,7 @@
   ) );
   ?>
     </div>
-    <div class="mt-auto p-2 bd-highlight">Flex item</div>
+    <div class="mt-auto p-2 bd-highlight"></div>
   </div>
     </div>
   </div>

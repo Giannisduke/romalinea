@@ -15,7 +15,9 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <?php //wp_nav_menu( array( 'theme_location'    => 'top_left' ) ); ?>
+
     <?php echo facetwp_display( 'facet', 'product_search' ); ?>
+    
     <?php wp_nav_menu( array(
       'theme_location'    => 'top_right',
       'menu_class'           => 'menu top-right',
