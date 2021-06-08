@@ -840,11 +840,12 @@ function loukia_front_carousel(){
 	}
         if( have_rows('carousel', $page_id) ):$counter = 0;?>
         <!--Carousel Section-->
-      <section class="hero">
+      <section class="hero collapse" id="herocollapse" >
         <!--Carousel Wrapper-->
         <div id="video-carousel" class="carousel slide carousel-fade home-section" data-interval="false">
           <!--Slides-->
           <div class="carousel-inner" role="listbox">
+
                 <?php while( have_rows('carousel', $page_id) ): the_row();
                   //  $slide_title = get_sub_field('slide_title');
                   //  $slide_subtitle = get_sub_field('slide_subtitle');
@@ -855,21 +856,28 @@ function loukia_front_carousel(){
                     $slide_external_video = get_sub_field('slide_external_video');
                     ?>
                     <div class="carousel-item <?php if($counter === 0){ echo "active";} ?>" data-slide-no="<?php echo $counter;?>" style="background: url('<?php echo $slide_image;?>') no-repeat center; background-size: cover;">
-                      <div class="carousel-caption d-none d-md-block">
+                        <div class="carousel-caption d-none d-md-block">
 
                             <?php  if (get_sub_field('slide_text', $page_id)) { ?>
-                              <div class="container h-100">
-                                <div class="row h-75">
+                              <div class="container">
+                                <div class="row">
                                   <div class="col">
                         <?php echo $slide_text;?>
                               <?php  } ?>
                                   </div>
                                 </div>
-                                <div class="row h-25">
-                                  test
-                                </div>
+
+                                  <div class="row p-4">
+                                    <div class="col">
+                                      <a class="btn btn-primary" data-toggle="collapse" href="#herocollapse" role="button" aria-expanded="false" aria-controls="herocollapse">
+                                        Link with href
+                                      </a>
+                                    </div>
+                                  </div>
+
                               </div>
                             </div>
+
                       <?php if (get_sub_field('slide_external_video' ))  { ?>
                         <div class="overlay-div"></div>
                         <video class="video-fluid" controls="top" controlsList="nofullscreen nodownload noremoteplayback" id="player" preload="auto" playsinline muted autoplay="true" loop="true">
@@ -882,7 +890,9 @@ function loukia_front_carousel(){
                         <?php  } ?>
                     </div>
                     <?php $counter++; endwhile; ?>
+
                       </div> <!--/.Slides-->
+
                       <a class="carousel-control-prev" href="#video-carousel" role="button" data-slide="prev">
                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                        <span class="sr-only">Previous</span>
@@ -891,6 +901,7 @@ function loukia_front_carousel(){
                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
                        <span class="sr-only">Next</span>
                      </a>
+
                     </div> <!--Carousel Wrapper-->
         <?php endif; ?>
       </section>
@@ -898,6 +909,20 @@ function loukia_front_carousel(){
 }
 add_action('woocommerce_before_main_content', 'loukia_front_carousel', 5);
 
+
+function slide_accordion_button() { ?>
+  <div class="container">
+    <div class="row p-5">
+      <div class="col text-center">
+        <a class="icon-collapse" data-toggle="collapse" href="#herocollapse" role="button" aria-expanded="false" aria-controls="herocollapse">
+          <span class="text">Link with href</span>
+          <span class="icon-collapse"></span>
+        </a>
+      </div>
+    </div>
+  </div>
+<?php }
+add_action ('woocommerce_before_main_content', 'slide_accordion_button', 5 );
 
 function test_acf() {
   if( have_rows('carousel') ):
@@ -920,6 +945,9 @@ endif;
 
 
 function product_open() { ?>
+  <div class="row">
+    <h1 class="animate__animated animate__bounce">An animated element</h1>
+  </div>
   <div class="row">
   <div class="container catalog">
 <?php }
