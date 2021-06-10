@@ -22,11 +22,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <div class="row px-3">
 <aside class="sidebar">
-	<div class="heading">
-		<span class="h2">Filters</span>
-		<button class="btn btn-lg btn-white" onclick="FWP.reset()">
-			<i class="ico reset" aria-hidden="true"></i>
-		</button>
+	<div class="container heading">
+		<div class="row">
+			<div class="col">
+		<span class="h2"><?php echo esc_html( 'Φίλτρα Αναζήτησης' ); ?></span>
+		</div>
+		</div>
+		<div class="row">
+			<?php  echo facetwp_display( 'facet', 'result_counts' ); ?>
+			<div class="col-6">
+			<a href="#" onclick="FWP.reset()" class="reset-btn"><?php echo esc_html( 'Ακύρωση φίλτρων' ); ?></a>
+		</div>
+	</div>
+
+
+
 	</div>
 <div class="panel-group" id="accordion">
 	  <?php dynamic_sidebar( 'sidebar-primary' ); ?>
@@ -34,13 +44,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 </aside>
 <div class="mainbar">
-	<div class="d-flex flex-row">
+	<div class="container">
+	<div class="row">
 
 
 <?php echo facetwp_display( 'selections' ); ?>
 
 
-<div class="ml-auto w-25">
+<div class="col-3">
 <?php echo facetwp_display( 'sort' ); ?>
 </div>
 	</div>

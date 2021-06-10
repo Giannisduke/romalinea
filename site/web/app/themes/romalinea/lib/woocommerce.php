@@ -671,3 +671,13 @@ function eboy_product_availability() {
 	echo '<span class="pa">' . $koostis . '</span>';
 	}
 add_action ('woocommerce_after_add_to_cart_button', 'eboy_product_availability', 20 );
+
+
+function total_product_count() {
+	$args = array( 'post_type' => 'product', 'post_status' => 'publish',
+	'posts_per_page' => -1 );
+	$products = new WP_Query( $args );
+	echo $products->found_posts;
+	echo esc_html( 'Προϊόντα' );
+}
+add_action ('roma_sidebar_header', 'total_product_count', 10 );

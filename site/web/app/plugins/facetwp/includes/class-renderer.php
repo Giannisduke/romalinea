@@ -604,7 +604,7 @@ class FacetWP_Renderer
     function get_sort_html( $params = [] ) {
 
         if ( isset( $this->sort_options ) ) {
-            $output = '<select class="facetwp-sort-select selectpicker custom-select custom-select-lg my-3">';
+            $output = '<select class="facetwp-sort-select selectpicker custom-select custom-select-lg">';
             foreach ( $this->sort_options as $key => $atts ) {
                 $output .= '<option value="' . $key . '">' . $atts['label'] . '</option>';
             }
