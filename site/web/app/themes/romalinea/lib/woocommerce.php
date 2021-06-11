@@ -274,9 +274,22 @@ remove_action ('woocommerce_single_product_summary', 'woocommerce_template_singl
 remove_action ('woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
 remove_action ('woocommerce_before_single_product_summary', 'woocommerce_show_product_sale_flash', 10 );
 remove_action ('woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
-
 remove_action ('woocommerce_after_shop_loop', 'woocommerce_pagination', 10 );
 
+function roma_related_products() {
+	global $product;
+
+if( ! is_a( $product, 'WC_Product' ) ){
+    $product = wc_get_product(get_the_id());
+}
+
+woocommerce_related_products( array(
+    'posts_per_page' => 4,
+    'columns'        => 4,
+    'orderby'        => 'rand'
+) );
+}
+add_action ('woocommerce_after_single_product_summary', 'roma_related_products', 19 );
 
 function prosilos_pagination() {
 
@@ -681,3 +694,10 @@ function total_product_count() {
 	echo esc_html( 'Προϊόντα' );
 }
 add_action ('roma_sidebar_header', 'total_product_count', 10 );
+
+function woocommerce_before_notifications() { ?>
+	<div class="col text-center">
+	<h2><?php wp_title(''); ?></h2>
+</div>
+<?php }
+add_action ('woocommerce_before_cart', 'woocommerce_before_notifications', 5 );
