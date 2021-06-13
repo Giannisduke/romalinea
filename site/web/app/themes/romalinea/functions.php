@@ -302,143 +302,6 @@ add_filter( 'facetwp_sort_options', function( $options, $params ) {
 }, 10, 3 );
 
 
-####################################################
-#    Front shop loop
-####################################################
-function sxhma_front_services(){ ?>
-  <div class="row row-cols-2 row-cols-md-4 px-3">
-    <div class="col my-5">
-      <div class="card">
-        <div class="store mx-auto"></div>
-        <div class="card-body">
-          <h5 class="card-title">Εκθεση Προϊοντων</h5>
-          <p class="card-text">Επισκεφτείτε το φυσικό μας κατάστημα, με δείγματα προϊόντων.</p>
-        </div>
-      </div>
-  </div>
-  <div class="col my-5">
-    <div class="card">
-    <div class="logo mx-auto"></div>
-      <div class="card-body">
-        <h5 class="card-title">Λογοτυπο</h5>
-        <p class="card-text">Μπορούμε να το κεντήσουμε & να το εκτυπώσουμε σε όλα τα ενδύματα.</p>
-      </div>
-    </div>
-</div>
-<div class="col my-5">
-  <div class="card">
-    <div class="support mx-auto"></div>
-    <div class="card-body">
-      <h5 class="card-title">Υποστηριξη</h5>
-      <p class="card-text">Είμαστε εδώ για να σας βοηθήσουμε να επιλέξετε το κατάλληλο προϊόν.</p>
-    </div>
-  </div>
-</div>
-<div class="col my-5">
-  <div class="card">
-    <div class="shipping mx-auto"></div>
-    <div class="card-body">
-      <h5 class="card-title">Δωρεαν μεταφορικα</h5>
-      <p class="card-text">Για όλη την Ελλάδα και αγορές μεγαλύτερες των 100€.</p>
-    </div>
-  </div>
-</div>
-  </div>
-
-
-<? }
-
-//add_action('prosilos_front', 'sxhma_front_services', 2);
-
-
-function sales_timer_countdown_product() {
-
-    global $product;
-
-    $sale_date = get_post_meta( $product->get_id(), '_sale_price_dates_to', true );
-
-    if ( ! empty( $sale_date ) ) {
-        ?>
-        <script>
-            // Set the date we're counting down to
-            var countDownDate = <?php echo $sale_date; ?> * 1000;
-
-            // Update the count down every 1 second
-            var x = setInterval(function() {
-                // Get today's date and time
-                var now = new Date().getTime();
-
-                // Find the distance between now and the count down date
-                var distance = countDownDate - now;
-
-                // Time calculations for days, hours, minutes and seconds
-                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                // Output the result in an element with id="saleend"
-                document.getElementById("countdown").innerHTML = '<span class="days">' + days +  ' <label>Days</label></span> <span class="hours">' + hours + ' <label>Hours</label></span> <span class="minutes">'
-    + minutes + ' <label>Minutes</label></span> <span class="seconds">' + seconds + ' <label>Seconds</label></span>';
-
-                // If the count down is over, write some text
-                if (distance < 0) {
-                    clearInterval(x);
-                    document.getElementById("countdown").innerHTML = "The sale for this product has EXPIRED";
-                }
-            }, 1000);
-        </script>
-
-        <!-- this is where the countdown is displayed -->
-        <div id="countdown" class="d-flex flex-row justify-content-center align-items-center shadow bg-white rounded w-40 mx-auto"></div>
-        <?php
-    }
-}
-
-add_action( 'prosilos_woocommerce_offer', 'sales_timer_countdown_product', 20 );
-
-function prosilos_front_shop_sale(){ ?>
-<offers class="" itemprop="offers">
-      <?php
-          $offersargs = array( 'post_type' => 'product', 'posts_per_page' => 1, 'product_cat' => 'προσφορά', 'facetwp' => false );
-          $offersloop = new WP_Query( $offersargs );
-          while ( $offersloop->have_posts() ) : $offersloop->the_post(); global $product;
-          $currency = get_woocommerce_currency_symbol();
-          $price = wc_price( wc_get_price_to_display( $product, array( 'price' => $product->get_regular_price() ) ) );
-          $sale_price = $product->get_sale_price();
-          $regular_price = $product->get_regular_price();
-          ?>
-            	<div class="col-6 my-auto">
-                <h5><?php _e( 'Προσφορα Ημερας', 'prosilos' ); ?></h5>
-                <?php the_title( '<h3 itemprop="name">', '</h3>' ); the_excerpt(); ?>
-                <?php echo '<div class="d-flex flex-row justify-content-center align-items-center"><span class="sale_price">'. $sale_price . $currency .'</span>'; ?>
-                <?php echo '<span class="regular_price">'. $regular_price . $currency .'</span></div>'; ?>
-                <?php do_action ('prosilos_woocommerce_offer'); ?>
-              </div>
-            	<div class="col-6 p-0">
-  	            <a href="<?php echo get_permalink( $offersloop->post->ID ) ?>" title="<?php echo esc_attr($offersloop->post->post_title ? $offersloop->post->post_title : $offersloop->post->ID); ?>">
-  	            	<?php
-  	            		//woocommerce_show_product_sale_flash( $product, $product );
-                    $image = get_field('commercial_image');
-                    $size = 'full'; // (thumbnail, medium, large, full or custom size)
-                    if( $image ) {
-                        echo wp_get_attachment_image( $image, $size );
-                    }
-
-  	              		//else echo '<img itemprop="image" src="'.woocommerce_placeholder_img_src().'" alt="Placeholder" width="300px" height="300px" />';
-
-  	              	?>
-  	            </a>
-              	<?php //woocommerce_template_loop_add_to_cart( $offersloop->post, $product ); ?>
-          	</div>
-      	<?php endwhile;
-      	wp_reset_postdata();
-      ?>
-</offers>
-<? }
-
-add_action('prosilos_front', 'prosilos_front_shop_sale', 5);
-
 function prosilos_front_shop(){  ?>
   <div class="row">
     <div class="col-3">
@@ -451,7 +314,7 @@ function prosilos_front_shop(){  ?>
      <li class="popular">
        <div class="card">
          <div class="popular_product mx-auto"></div>
-         <div class="card-body">
+         <div class="card-body test">
            <h5 class="card-title"><?php _e( 'Δημοφιλη Προϊοντα', 'prosilos' ); ?></h5>
            <p class="card-text">Είμαστε εδώ για να σας βοηθήσουμε να επιλέξετε το κατάλληλο προϊόν.</p>
          </div>
@@ -587,7 +450,7 @@ function woocommerce_get_sku() {
 
 remove_action('woocommerce_shop_loop_item_title','woocommerce_template_loop_product_title',10);
 //remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_price', 10 );
-
+//remove_action ('woocommerce_before_shop_loop_item_title', 'woocommerce_show_product_loop_sale_flash', 10 );
 
 function prosilos_template_loop_product_title() {
     echo '<div class="row"><div class="col-12"><h4 class="card-title">' . get_the_title() . '</h4></div>';
@@ -599,7 +462,19 @@ function prosilos_template_loop_price_before() {
 }
 add_action('woocommerce_shop_loop_item_title', 'prosilos_template_loop_price_before', 20 );
 
-add_action( 'woocommerce_shop_loop_item_title', 'woocommerce_template_loop_price', 30 );
+$user = wp_get_current_user();
+if ( in_array( 'administrator', (array) $user->roles ) ) {
+    //The user has the "author" role
+  //  add_action ('woocommerce_before_shop_loop_item_title', 'woocommerce_show_product_loop_sale_flash', 10 );
+    add_action( 'woocommerce_shop_loop_item_title', 'woocommerce_template_loop_price', 30 );
+}
+//
+if ( in_array( 'customer', (array) $user->roles ) ) {
+    //The user has the "author" role
+  //  add_action ('woocommerce_before_shop_loop_item_title', 'woocommerce_show_product_loop_sale_flash', 10 );
+    add_action( 'woocommerce_shop_loop_item_title', 'woocommerce_template_loop_price', 30 );
+}
+
 
 function prosilos_template_loop_price_after() {
     echo '</div>';
@@ -1141,3 +1016,55 @@ function variation_custom_price( $price, $variation ){
              return $price - $discount;
        }
 }
+
+function dequeue_gf_stylesheets() {
+    wp_dequeue_style( 'gforms_reset_css' );
+    wp_dequeue_style( 'gforms_datepicker_css' );
+    wp_dequeue_style( 'gforms_formsmain_css' );
+    wp_dequeue_style( 'gforms_ready_class_css' );
+    wp_dequeue_style( 'gforms_browsers_css' );
+}
+//add_action( 'gform_enqueue_scripts_1', 'dequeue_gf_stylesheets', 11 );
+
+function roma_header_form_basic() {
+ if ( is_shop() ) :
+
+echo facetwp_display( 'facet', 'product_search' );
+
+else : ?>
+
+<form action="/shop/"  method="get" class="d-flex flex-row">
+
+   <input type="search" class="form-control" placeholder="Search &hellip;" value="" name="_product_search">
+
+       <button type="submit" class="btn btn-primary">Search</button>
+
+</form>
+
+<?php endif;
+
+}
+add_action ('roma_header_form', 'roma_header_form_basic', 40 );
+
+function roma_header_subheader_basic() {
+ if ( is_shop() ) :
+
+   else : ?>
+
+<div class="container-fluid subheader">
+  <div class="row">
+    <div class="col">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <?php the_roma_breadcrumb(); ?>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+<?php endif;
+
+}
+add_action ('roma_header_subheader', 'roma_header_subheader_basic', 40 );

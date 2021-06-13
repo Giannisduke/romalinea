@@ -135,6 +135,7 @@ function add_percentage_to_sale_badge( $html, $post, $product ) {
 
         $percentage    = round(100 - ($sale_price / $regular_price * 100)) . '%';
     }
+		
     return '<span class="badge badge-pill badge-primary">' . esc_html__( 'Sale', 'prosilos' ) . ' ' . $percentage . '</span>';
 }
 add_filter( 'woocommerce_sale_flash', 'add_percentage_to_sale_badge', 20, 3 );
@@ -700,4 +701,4 @@ function woocommerce_before_notifications() { ?>
 	<h2><?php wp_title(''); ?></h2>
 </div>
 <?php }
-add_action ('woocommerce_before_cart', 'woocommerce_before_notifications', 5 );
+//add_action ('woocommerce_before_cart', 'woocommerce_before_notifications', 5 );

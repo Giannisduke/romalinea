@@ -1,0 +1,102 @@
+.gf_footer_center .gform_page_footer,
+.gf_footer_center .gform_footer,
+.gf_footer_center_left .gform_page_footer,
+.gf_footer_center_left .gform_footer,
+.gf_footer_center_right .gform_page_footer,
+.gf_footer_center_right .gform_footer {
+    text-align: center;
+}
+.gf_footer_center_left .gform_page_footer .gform_previous_button {
+    float: left;
+}
+.gf_footer_center_right .gform_page_footer .gform_previous_button {
+    float: right;
+}
+.gf_footer_left .gform_page_footer,
+.gf_footer_left .gform_footer {
+    text-align: left;
+}
+.gf_footer_right .gform_page_footer,
+.gf_footer_right .gform_footer {
+    text-align: right;
+}
+.gf_footer_spread .gform_page_footer,
+.gf_footer_spread .gform_footer {
+    overflow: auto
+}
+.gf_footer_spread .gform_page_footer .button,
+.gf_footer_spread .gform_footer .button,
+.gf_footer_spread .gform_save_link,
+.gf_footer_spread .gform_ajax_spinner {
+    float: right;
+}
+.gf_footer_spread_wrapper .gform_footer .gform_save_link.button,
+.gf_footer_spread_wrapper .gform_page_footer .gform_save_link.button {
+    float: left;
+    margin-left: 0;
+}
+.gf_footer_spread .gform_page_footer .gform_previous_button {
+    float: left;
+    margin-right: 1em;
+}
+.gf_footer_spread .gform_page_footer .gform_next_button {
+	margin-left: 1em;
+}
+
+.gf_footer_spread .gform_ajax_spinner {
+    margin-top: .75em;
+}
+
+
+/* .gf_footer_spread .gform_page_footer,
+.gf_footer_spread .gform_footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+}
+@media only screen and (min-width: 480px)  {
+  .gf_footer_spread .gform_save_link,
+  .gf_footer_spread .gform_previous_button {
+      order: -1;
+   }
+}
+
+.gf_footer_spread .gform_save_link {
+    margin-left: auto  !important;
+    margin-right: auto  !important;
+} */
+/* .gf_footer_spread .gform_page_footer,
+.gf_footer_spread .gform_footer {
+    width: 100%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[12];
+    grid-template-columns: repeat( 12, 1fr );
+    grid-template-rows: repeat( auto-fill, auto );
+    grid-column-gap: 32px;
+    grid-row-gap: 16px;
+}
+.gf_footer_spread .button {
+  grid-column: 1 / 13
+} */
+
+.gf_footer_full .gform_page_footer,
+.gf_footer_full .gform_footer {
+    display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+/*         flex-flow: row wrap;
+          justify-content: center;
+  justify-content: space-between;
+    justify-content: stretch; */
+}
+.gf_footer_full .gform_page_footer .button,
+.gf_footer_full .gform_footer .button {
+    flex: 1 1 0;
+}
+.gf_footer_full .gform_page_footer .gform_save_link,
+.gf_footer_full .gform_footer .gform_save_link {
+    flex-basis: auto;
+    flex-grow: 0;
+}

@@ -1,0 +1,64 @@
+
+/* Footer Options */
+.gf_footer_center .gform_page_footer,
+.gf_footer_center .gform_footer  {
+    text-align: center;
+}
+.gf_footer_left .gform_page_footer,
+.gf_footer_left .gform_footer {
+    text-align: left;
+}
+.gf_footer_right .gform_page_footer,
+.gf_footer_right .gform_footer {
+    text-align: right;
+}
+.gf_footer_spread .gform_page_footer .gform_next_button,
+.gf_footer_spread .gform_page_footer .gform_button,
+.gf_footer_spread .gform_save_link {
+    float: right;
+}
+.gf_footer_spread .gform_page_footer .gform_next_button {
+	margin-left: 1.5em;
+}
+.gf_footer_full .gform_page_footer .gform_next_button,
+.gf_footer_full .gform_footer .gform_button {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.gf_footer_full .gform_page_footer .gform_previous_button {
+    width: 49%;
+	margin-left: auto;
+    margin-right: auto;
+}
+.gf_footer_full .gform_page_footer .gform_previous_button + .gform_next_button,
+.gf_footer_full .gform_page_footer .gform_previous_button + .gform_button {
+    width: 49%;
+    float: right;
+    margin-left: auto;
+    margin-right: auto;
+}
+.gf_footer_full .gform_save_link {
+	margin-left: 0;
+}
+.gf_footer_center_left .gform_page_footer,
+.gf_footer_center_left .gform_footer,
+.gf_footer_center_right .gform_page_footer,
+.gf_footer_center_right .gform_footer   {
+    text-align: center;
+}
+.gf_footer_center_left .gform_page_footer .gform_previous_button{
+    float: left;
+}
+.gf_footer_center_right .gform_page_footer .gform_previous_button{
+    float: right;
+}
+.gf_footer_clean .gform_page_footer,
+.gf_footer_clean .gform_footer {
+    border: 0;
+    padding-top: 0;
+}
+/* .gform_ajax_spinner {
+    vertical-align: middle;
+    margin-left: .3em;
+} */

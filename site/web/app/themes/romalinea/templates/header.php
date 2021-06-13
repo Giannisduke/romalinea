@@ -15,7 +15,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <?php //wp_nav_menu( array( 'theme_location'    => 'top_left' ) ); ?>
-    <?php echo facetwp_display( 'facet', 'product_search' ); ?>
+    <?php do_action( 'roma_header_form' ); ?>
     <?php wp_nav_menu( array(
       'theme_location'    => 'top_right',
       'menu_class'           => 'menu top-right',
@@ -26,6 +26,6 @@
       'link_after' => '</span>'
      ) ); ?>
   </nav>
-  <?php //woocommerce_mini_cart(); ?>
+<?php do_action( 'roma_header_subheader' ); ?>
 </header>
   <?php do_action( 'prosilos_archive_products' ); ?>

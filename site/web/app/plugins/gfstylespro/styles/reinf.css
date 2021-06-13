@@ -1,0 +1,188 @@
+
+.gf_stylespro_wrapper {
+    background-color            : var(--gfsp--bg-color, initial) !important;
+    background-image            : var(--gfsp--bg-img, none) !important;
+    background-size             : var(--gfsp--bg-size, initial) !important;
+    padding                     : var(--gfsp--wr-padding, none) !important;
+}
+
+.gf_stylespro_wrapper .gf_stylespro ::-webkit-input-placeholder {
+    color                       : var(--gfsp--placeholder-color, #999) !important;
+}
+.gf_stylespro_wrapper .gf_stylespro ::placeholder {
+    color                       : var(--gfsp--placeholder-color, #999) !important;
+}
+.gf_stylespro_wrapper .gf_stylespro :-ms-input-placeholder {
+    color                       : var(--gfsp--placeholder-color, #999) !important;
+}
+
+.gf_stylespro_wrapper .gf_stylespro {
+    font-size                   : var(--gfsp--base-font-size, 15px) !important;
+}
+.gf_stylespro_wrapper .gf_stylespro .gfield_label {
+    font-size                   : var(--gfsp--label-font-size, 1em) !important;
+}
+.gf_stylespro_wrapper .gf_stylespro .gfield_label {
+    font-size                   : var(--gfsp--label-font-size, 1em) !important;
+    font-weight                 : var(--gfsp--label-font-weight, normal) !important;
+    font-style                  : var(--gfsp--label-font-style, normal) !important;
+    text-decoration             : var(--gfsp--label-text-decoration, none) !important;
+    background-color            : var(--gfsp--label-bg-color, none) !important;
+    text-align                  : var(--gfsp--label-align, inherit) !important;
+    padding                     : var(--gfsp--label-padding, 0) !important;
+    margin-bottom               : var(--gfsp--label-margin-bottom, 8px) !important;
+}
+.gf_stylespro_wrapper .gf_stylespro .ginput_complex label,
+.gf_stylespro .gfield_description,
+.gf_stylespro_wrapper .gf_stylespro .ginput_counter {
+    font-family                 : var(--gfsp--font, inherit) !important;
+    color                       : var(--gfsp--label-font-color, inherit) !important;
+}
+.gf_stylespro_wrapper .gf_stylespro .gfield {
+    margin-bottom               : var(--gfsp--field-margin-bottom, 0) !important;
+}
+.gf_stylespro .gfsp_icon {
+    color                       : var(--gfsp--field-icon-color, inherit) !important;
+}
+.gf_stylespro .o-custom-bg input[type]:checked + label,
+.gf_stylespro .o-custom-bg li:not(.gfsp_choice_icn):not(.gfsp_choice_img) :checked + label {
+    background                  : var(--gfsp--o-bg-color, #5ac26f) !important;
+}
+.gf_stylespro .o-custom-bg input:checked + label:after {
+    color                       : var(--gfsp--o-bg-color, #5ac26f) !important;
+}
+.gf_stylespro .o-custom-border input:checked + label,
+.gf_stylespro .o-custom-border li:not(.gfsp_choice_icn):not(.gfsp_choice_img) :checked + label {
+    border-color                : var(--gfsp--o-bg-color, #4a92ff) !important;
+}
+.gfsp_o_frame input:checked + label .o_label > i {
+	color: var(--gfsp--o-bg-color, #5ac26f) !important;
+}
+.gf_stylespro .o-custom-bg.o-ticktopright .o_label:after,
+.gf_stylespro .o-custom-bg input:checked + label .o_text,
+.gf_stylespro .o-custom-bg input[type]:checked + label,
+.gf_stylespro .o-custom-bg input:checked +label .ginput_price  {
+    color                       : var(--gfsp--o-bg-text-color, white) !important;
+}
+.gf_stylespro input:not([type="radio"]):not([type="checkbox"]):not([type=button]):not([type=submit]),
+.gf_stylespro select,
+.gf_stylespro textarea,
+.gf_stylespro input[type="text"],
+.gf_stylespro input[type="tel"],
+.gf_stylespro input[type="email"],
+.gf_stylespro input[type="url"],
+.gf_stylespro input[type="password"],
+.gf_stylespro input[type="search"],
+.gf_stylespro input[type="number"],
+.gf_stylespro .chosen-choices,
+.gf_stylespro .gfsp_icon {
+    padding-top                 : var(--gfsp--field-v-padding) !important;
+    padding-bottom              : var(--gfsp--field-v-padding) !important;
+    border-width                : var(--gfsp--field-border-width, 1px) !important;
+    line-height: 1.44 !important;
+}
+.gf_stylespro_wrapper .gf_stylespro .gfield_description.validation_message,
+.gf_stylespro .validation_error,
+.gf_stylespro_wrapper .gfield_validation_message,
+.gf_stylespro_wrapper .validation_message,
+.gf_stylespro_wrapper .gform_validation_errors {
+    color                       : var(--gfsp--warning-color, #C02B0A) !important;
+    border-color                : var(--gfsp--warning-color, #C02B0A) !important;
+    background-color            : var(--gfsp--warning-bg-color, #FFF9F9) !important;
+}
+.gf_stylespro .gfield_required,
+.gf_stylespro_wrapper .gfield_error .gfield_repeater_cell label,
+.gf_stylespro_wrapper .gfield_error legend,.gf_stylespro_wrapper .gfield_validation_message,
+.gf_stylespro_wrapper .validation_message,
+.gf_stylespro_wrapper [aria-invalid=true]+label,
+.gf_stylespro_wrapper label+[aria-invalid=true],
+.gf_stylespro_wrapper .gform_validation_errors>ol,
+.gf_stylespro_wrapper .gform_validation_errors>ol li,
+.gf_stylespro_wrapper .gform_validation_errors>ol a,
+.gf_stylespro_wrapper .gform_validation_errors>h2 {
+    color: var(--gfsp--warning-color, #C02B0A)
+}
+.gf_stylespro_wrapper .validation_error {
+    border-bottom-color: var(--gfsp--warning-color, #C02B0A) !important;
+    border-top-color: var(--gfsp--warning-color, #C02B0A) !important;
+    color: var(--gfsp--warning-color, #C02B0A) !important;
+}
+.gf_stylespro_wrapper .gf_stylespro .gfield_description {
+    font                        : var(--gfsp--desc-font, inherit) !important;
+    font-size                   : var(--gfsp--desc-font-size, 15px) !important;
+    color                       : var(--gfsp--desc-color, inherit) !important;
+    text-align                  : var(--gfsp--desc-align, inherit) !important;
+    padding                     : var(--gfsp--desc-padding, 13px 0 0 0) !important;
+    margin-bottom               : var(--gfsp--desc-margin-bottom, 0) !important;
+    background-color            : var(--gfsp--desc-bg-color, none) !important;
+    font-weight                 : var(--gfsp--desc-font-weight, normal) !important;
+    font-style                  : var(--gfsp--desc-font-style, normal) !important;
+    text-decoration             : var(--gfsp--desc-text-decoration, none) !important;
+}
+.gf_stylespro_wrapper  .gf_stylespro .gfield_validation_message {
+    padding                     : var(--gfsp--desc-padding, 12.992px 24px) !important;
+}
+.gform_legacy_markup.gf_stylespro .gfield_description {
+    padding                     : var(--gfsp--desc-padding, .1em .5em) !important;    
+}
+
+/* Choice styles */
+.gfsp_ios {
+    --gfsp-choice-style-color: #54f184 !important;
+}
+.gfsp_toggle {
+    --gfsp-choice-style-color: #6abefb !important;
+}
+.gfsp_flip {
+    --gfsp-choice-style-color: #53ee7c !important;
+}
+.gfsp_dot {
+    --gfsp-choice-style-color: #4a92ff !important;
+}
+.gf_stylespro .gfsp_toggle input[type]:not(old):checked + label:after,
+.gf_stylespro .gfsp_ios input[type]:not(old):checked + label:before,
+.gf_stylespro .gfsp_flip input[type]:not(old) + label:after {
+    background-color:var(--gfsp-choice-style-color) !important;
+}
+.gf_stylespro .gfsp_toggle input[type]:not(old):checked + label:before {
+    background-color: var(--gfsp-choice-style-color-muted, #aed6ff) !important;
+}
+.gf_stylespro .gfsp_draw input[type]:not(old) + label:after {
+    color:var(--gfsp-choice-style-color)
+}
+.gf_stylespro .gfsp_dot input[type]:not(old) + label:before {
+    box-shadow: 0 0 0px 10px inset, 0 0 0px 15px var(--gfsp-choice-style-color) inset !important;
+    border-color:var(--gfsp-choice-style-color) !important;
+}
+.gf_stylespro .gfsp_dot input[type]:not(old):checked + label:before {
+    box-shadow: 0 0 0px 4px inset, 0 0 0px 15px var(--gfsp-choice-style-color) inset !important;
+    border-color:var(--gfsp-choice-style-color) !important;
+}
+
+.gf_stylespro_wrapper.gform_wrapper select,
+.gf_stylespro_wrapper.gform_wrapper textarea,
+.gf_stylespro_wrapper.gform_wrapper input[type="text"],
+.gf_stylespro_wrapper.gform_wrapper input[type="email"],
+.gf_stylespro_wrapper.gform_wrapper input[type="url"],
+.gf_stylespro_wrapper.gform_wrapper input[type="tel"],
+.gf_stylespro_wrapper.gform_wrapper input[type="number"],
+.gf_stylespro_wrapper.gform_wrapper input[type="password"],
+.gf_stylespro_wrapper.gform_wrapper input[type="number"],
+.gf_stylespro_wrapper.gform_wrapper input[type="search"],
+.gf_stylespro_wrapper.gform_wrapper textarea,
+.gf_stylespro_wrapper.gform_wrapper .gfsp_icon,
+.gf_stylespro_wrapper.gform_wrapper .chosen-choices {
+    font-size: var(--gfsp--field-font-size, 15px) !important;
+    padding-top: var(--gfsp--field-v-padding) !important;
+    padding-bottom: var(--gfsp--field-v-padding) !important;
+}
+
+
+html:not([dir=rtl]) .gf_stylespro .gf_icn_border:not(.gf_icon_after) .gfsp_icon,
+html:not([dir=rtl]) .gf_stylespro .gf_icn_bs:not(.gf_icon_after) .gfsp_icon {
+    border-right-width: 0 !important;
+}
+.rtl .gf_stylespro .gf_icn_border:not(.gf_icon_after) .gfsp_icon,
+.rtl .gf_stylespro .gf_icn_bs:not(.gf_icon_after) .gfsp_icon {
+    border-left-width: 0 !important;
+}

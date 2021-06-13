@@ -1,0 +1,327 @@
+/* Base styles... hmm! */
+.gfsp_icon {
+	background: none;
+	padding: 0.5em .5em;
+	/* font-size: 1em; */
+	font-size: 15px;
+	line-height: normal;
+	outline: none;
+	margin: 0;
+	height: auto;
+	border-radius: 0px;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	display: inline-block;
+	box-sizing: border-box;
+}
+.gfsp_icon{
+    border: none;
+}
+
+.ginput_container_fileupload .gfsp_icon,
+.ginput_container_post_image .gfsp_icon
+.ginput_container_fileupload input,
+.ginput_container_post_image input
+{
+    /* TODO: Check */
+	vertical-align: middle;
+}
+
+
+
+
+
+
+
+/* File type field */
+.ginput_container_fileupload .gfsp_icon::before,
+.ginput_container_post_image .gfsp_icon::before {
+    padding: .3em 0;
+    display: inline-block;
+}
+.gform_drop_area .gfsp_icon::before {
+    padding: .14em 0;    
+}
+.gf_browser_gecko .ginput_container_fileupload .gfsp_icon::before,
+.gf_browser_gecko .ginput_container_post_image .gfsp_icon::before {
+    padding: .2em 0;
+}
+.gform_drop_area .gfsp_icon::before,
+.gf_browser_chrome .gform_drop_area .gfsp_icon::before {
+    padding: .14em 0;    
+}
+
+
+
+@media only screen and (max-width: 641px)  {
+
+    .gf_stylespro .ginput_container span:not(.ginput_price):not(.gfsp_icon) {
+        /* margin-bottom: 8px;
+        display: block; */
+    }
+
+ }
+
+
+
+ 
+.gfsp_icon {
+    position: relative;
+    width: 2.2em;
+    overflow: hidden;
+    vertical-align: bottom;
+}
+.gfsp_icon i {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 50%;
+    text-align: center;
+    margin-top: -25%;
+}
+.gfsp_icon i.fa {
+    font-family: inherit !important;
+    line-height: normal;
+}
+.gfsp_icon .fa:before {
+  font-family: "FontAwesome";
+}
+.gfsp_icon:before {
+    content: 'M';
+    opacity: 0 !important;
+}
+.gf_icn_large .gfsp_icon i:before {
+    font-size: 1.4em;
+    line-height: .8;
+}
+
+/* Adjust Icon fields for smaller pages */
+.gf_stylespro .has_gfsp_icn input,
+.gf_stylespro .has_gfsp_icn select,
+.gf_stylespro .has_gfsp_icn .large.full {
+    max-width: 85%;
+    max-width: calc(100% - 2.2em);
+    display: inline-block;
+}
+.gfield:not(.gf_icn_inset) .has_gfsp_icn input,
+.gfield:not(.gf_icn_inset) .has_gfsp_icn select {
+    max-width: calc(100% - 2.2em);
+}
+.gf_stylespro .ginput_complex.has_gfsp_icn input,
+.gf_stylespro .ginput_complex.has_gfsp_icn select,
+.gf_stylespro .ginput_container_date.has_gfsp_icn input,
+.gf_stylespro .ginput_container_date.has_gfsp_icn select{
+    max-width: 100%;
+}
+.gf_stylespro .ginput_complex.has_gfsp_icn span:first-child input,
+.gf_stylespro .ginput_complex.has_gfsp_icn span:first-child select,
+.gf_stylespro .ginput_container_date.has_gfsp_icn span:first-child input,
+.gf_stylespro .ginput_container_date.has_gfsp_icn span:first-child select,
+.gf_stylespro .ginput_container_email.has_gfsp_icn input,
+.gf_stylespro .ginput_container_password.has_gfsp_icn input {
+    max-width: 85%;
+    max-width: calc(100% - 2.2em);
+    display: inline-block;
+}
+.gf_stylespro .gf_icn_inset .has_gfsp_icn input,
+.gf_stylespro .gf_icn_inset .has_gfsp_icn .large.full,
+.gf_stylespro .gf_icn_inset .has_gfsp_icn select,
+.gf_stylespro .gf_icn_inset .ginput_complex.has_gfsp_icn span:first-child input,
+.gf_stylespro .gf_icn_inset .ginput_complex.has_gfsp_icn span:first-child select {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+.gf_stylespro .has_gfsp_icn .chosen-container {
+    max-width: calc(100% - 2.24em);
+}
+
+/* ICON INSET */
+.gf_icn_inset .gfsp_icon {
+    position: absolute;
+    pointer-events: none;
+    margin-top: var(--gfsp--field-border-width, 1px);
+}
+.gf_icn_inset:not(.gf_icon_after) .ginput_container:not(.ginput_complex):not(.ginput_container_date):not(.ginput_container_time) select,
+.gf_icn_inset:not(.gf_icon_after) .ginput_container:not(.ginput_complex):not(.ginput_container_date):not(.ginput_container_time) input,
+.gf_icn_inset:not(.gf_icon_after) .ginput_container_date:first-child input,
+.gf_icn_inset:not(.gf_icon_after) .ginput_container_date input.datepicker,
+.gf_icn_inset:not(.gf_icon_after) .ginput_container_date:first-child > select,
+.gf_icn_inset:not(.gf_icon_after) .ginput_container_time:first-child > input,
+.gf_icn_inset:not(.gf_icon_after) .ginput_complex span:first-child > input,
+.gf_icn_inset:not(.gf_icon_after) .ginput_complex span:first-child > select,
+.gf_icn_inset:not(.gf_icon_after) .ginput_complex.ginput_container_email input {
+  padding-left: 2.15em;
+}
+.rtl .gf_icn_inset:not(.gf_icon_after) .ginput_container:not(.ginput_complex):not(.ginput_container_date):not(.ginput_container_time) select,
+.rtl .gf_icn_inset:not(.gf_icon_after) .ginput_container:not(.ginput_complex):not(.ginput_container_date):not(.ginput_container_time) input,
+.rtl .gf_icn_inset:not(.gf_icon_after) .ginput_container_date:first-child input,
+.rtl .gf_icn_inset:not(.gf_icon_after) .ginput_container_date input.datepicker,
+.rtl .gf_icn_inset:not(.gf_icon_after) .ginput_container_date:first-child > select,
+.rtl .gf_icn_inset:not(.gf_icon_after) .ginput_container_time:first-child > input,
+.rtl .gf_icn_inset:not(.gf_icon_after) .ginput_complex span:first-child > input,
+.rtl .gf_icn_inset:not(.gf_icon_after) .ginput_complex span:first-child > select,
+.rtl .gf_icn_inset:not(.gf_icon_after) .ginput_complex.ginput_container_email input {
+  padding-right: 2.15em;
+  padding-left: 8px;
+}
+
+.gf_icn_inset.gf_icon_after .ginput_container:not(.ginput_complex):not(.ginput_container_date):not(.ginput_container_time) input,
+.gf_icn_inset.gf_icon_after .ginput_container.ginput_complex span:first-child input,
+.gf_icn_inset.gf_icon_after .ginput_container_date.has_gfsp_icn:last-child > input,
+/* .gf_icn_inset.gf_icon_after .ginput_container_date.has_gfsp_icn:last-child > select, */
+.gf_icn_inset.gf_icon_after .ginput_complex.ginput_container_email input {
+  padding-right: 2.7em;
+}
+.gf_icn_inset.gf_icon_after .ginput_container_date.has_gfsp_icn:last-child > input,
+.gf_icn_inset:not(.gf_icon_after) .ginput_container_date.has_gfsp_icn:first-child > input,
+.gf_icn_inset.gf_icon_after .ginput_container_time:last-child > select,
+.gf_icn_inset:not(.gf_icon_after) .ginput_container_time:first-child > input {
+	width: 5.5em;
+}
+.gf_icn_inset.gf_icon_after .ginput_container:not(.ginput_complex):not(.ginput_container_date):not(.ginput_container_time) select,
+.gf_icn_inset.gf_icon_after .ginput_container.ginput_complex span:first-child select,
+.gf_icn_inset.gf_icon_after .ginput_container_date:last-child > select,
+.gf_icn_inset.gf_icon_after .ginput_container_time:last-child > select
+ {
+  padding-right: 3.4em;
+  background-position: center right 2.2em;
+}
+/* .gf_icn_inset .gfsp_icon:after {
+  content: " ";
+  border-right: 2px solid rgba(154, 154, 154, 0.37);
+  display: block;
+  height: 1em;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  right: 0;
+}
+.rtl .gf_icn_inset .gfsp_icon:after {
+    border-right: 0;
+    border-left: 1px solid rgba(154, 154, 154, 0.37);
+    border-color: inherit;
+    right: initial;
+    left: 0;
+} */
+
+.gf_icn_inset.gf_icon_after .gfsp_icon:after {
+  right: inherit;
+  left: 0;
+}
+.gf_icn_inset.gf_icon_after .gfsp_icon {
+    margin-left: -2.2em;
+}
+
+
+/* ICON BORDER */
+.gf_icn_border .gfsp_icon {
+	border: 1px solid silver;
+/* 	border-right-width: 0; */
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.08);
+}
+.gf_icn_border.gf_icon_after .gfsp_icon {
+	/* border-right-width: 1px; */
+	/* border-left-width: 0; */
+}
+html:not([dir="rtl"]) .gf_icn_border.gf_icon_after .gfsp_icon,
+html:not([dir="rtl"]) .gf_icn_bs.gf_icon_after .gfsp_icon {
+    border-left-width: 0;
+}
+
+
+
+/* ICON BORDER BOOTSTRAP STYLE */
+.gf_icn_bs .gfsp_icon + input{
+/* 	border-left-color: #f3f3f3; */
+}
+.gf_icn_bs .gfsp_icon {
+	-webkit-border-radius: 4px 0 0 4px;
+	-moz-border-radius: 4px 0 0 4px;
+	border-radius: 4px 0 0 4px;
+	background-color: #eee;
+	border: 1px solid #ccc;
+}
+html:not([dir=rtl]) .gf_icn_bs:not(.gf_icon_after) .gfsp_icon {
+	border-right-width: 0;	
+}
+html:not([dir=rtl]) .gf_icn_bs.gf_icon_after .gfsp_icon {
+	border-left-width: 0;
+}
+.gf_icn_bs.gf_icon_after .gfsp_icon {
+	/* border-right-width: 1px; */
+	-webkit-border-radius: 0 4px 4px 0;
+	-moz-border-radius: 0 4px 4px 0;
+	border-radius: 0 4px 4px 0;
+}
+
+
+
+html:not([dir=rtl]) .gf_stylespro .gf_icn_border .gfsp_icon + select,
+html:not([dir=rtl]) .gf_stylespro .gf_icn_bs .gfsp_icon + select,
+html:not([dir=rtl]) .gf_stylespro .gf_icn_border .gfsp_icon + input,
+html:not([dir=rtl]) .gf_stylespro .gf_icn_bs .gfsp_icon + input {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left-width: 1px;
+}
+
+html:not([dir=rtl]) .gf_stylespro .gf_icn_border:not(.gf_icon_after) .gfsp_icon,
+html:not([dir=rtl]) .gf_stylespro .gf_icn_bs:not(.gf_icon_after) .gfsp_icon {
+    border-right-width: 0;
+}
+.gf_stylespro .gf_icn_border.gf_icon_after .gfsp_icon,
+.gf_stylespro .gf_icn_bs.gf_icon_after .gfsp_icon {
+    /* border-left-width: 0; */
+}
+.gf_stylespro .gf_icn_bs .gfsp_icon {
+    border-color: #ccc;
+}
+.gf_stylespro .has_gfsp_icn > * {
+/*     vertical-align: middle; */
+}
+/* Image icons */
+.gfsp_icn_img {
+    background-size: contain;
+    height: 1em;
+    margin-left: .5em;
+    background-repeat: no-repeat;
+}
+.gf_icn_large .gfsp_icn_img {
+    height: 1.5em;
+    margin-left: 0;
+    margin-top: -35%;
+}
+
+
+/* RTL */
+.rtl .gf_icn_bs .gfsp_icon {
+    border-radius: 0 4px 4px 0;
+}
+.rtl .gf_stylespro .gf_icn_border:not(.gf_icon_after) .gfsp_icon,
+.rtl .gf_stylespro .gf_icn_bs:not(.gf_icon_after) .gfsp_icon {
+    border-left-width: 0;
+}
+.rtl .gf_icn_bs.gf_icon_after .gfsp_icon {
+    border-right-width: 0;
+    border-radius: 4px 0 0 4px;
+}
+
+/* Icon After */
+.rtl .gf_icn_inset.gf_icon_after .gfsp_icon:after {
+  left: inherit;
+  right: 0;
+}
+.rtl .gf_icn_inset.gf_icon_after .gfsp_icon {
+    margin-right: -2.2em;
+}
+.rtl .gf_icn_inset.gf_icon_after .ginput_container:not(.ginput_complex):not(.ginput_container_date):not(.ginput_container_time) input,
+.rtl .gf_icn_inset.gf_icon_after .ginput_container.ginput_complex span:first-child input,
+.rtl .gf_icn_inset.gf_icon_after .ginput_container_date.has_gfsp_icn:last-child > input,
+.rtl .gf_icn_inset.gf_icon_after .ginput_complex.ginput_container_email input {
+  padding-left: 2.7em;
+  padding-right: 8px;
+}
+.rtl .gf_icn_border.gf_icon_after .gfsp_icon {
+    border-right-width: 0;
+}
+
