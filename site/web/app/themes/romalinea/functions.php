@@ -777,13 +777,16 @@ add_action('woocommerce_before_main_content', 'loukia_front_carousel', 5);
 
 
 function slide_accordion_button() { ?>
+
   <div class="container">
     <div class="row">
       <div class="col text-center">
+        <hr class="devider_hero">
         <a class="icon-collapse accordion-toggle" data-toggle="collapse" href="#herocollapse" role="button" aria-expanded="false" aria-controls="herocollapse">
           <span class="text">Link with href</span>
           <span class="icon-collapse"></span>
         </a>
+
       </div>
     </div>
   </div>

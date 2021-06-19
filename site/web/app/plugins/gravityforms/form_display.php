@@ -3755,9 +3755,8 @@ class GFFormDisplay {
 
 	public static function get_progress_steps( $form, $page ) {
 
-		$progress_steps = "<div id='gf_page_steps_{$form['id']}' class='gf_page_steps'>";
+		$progress_steps = "<ul id='gf_page_steps_{$form['id']}' class='gf_page_steps'>";
 		$pages  = isset( $form['pagination']['pages'] ) ? $form['pagination']['pages'] : array();
-
 		for ( $i = 0, $count = sizeof( $pages ); $i < $count; $i ++ ) {
 			$step_number    = $i + 1;
 			$active_class   = $step_number == $page ? ' gf_step_active' : '';
@@ -3771,11 +3770,12 @@ class GFFormDisplay {
 
 			$classes = GFCommon::trim_all( $classes );
 
-			$progress_steps .= "<div id='gf_step_{$form['id']}_{$step_number}' class='{$classes}'><span class='gf_step_number'>{$step_number}</span><span class='gf_step_label'>{$pages[ $i ]}</span></div>";
+			$progress_steps .= "<li id='gf_step_{$form['id']}_{$step_number}' class='{$classes}'><span class='h1'><small class='text-muted gf_step_number'>{$step_number}.</small><h3>{$pages[ $i ]}</h3></span></li>";
 
 		}
 
-		$progress_steps .= "</div>";
+		$progress_steps .= "</ul>";
+//		$progress_steps .= "<hr/>";
 
 
 		/**
