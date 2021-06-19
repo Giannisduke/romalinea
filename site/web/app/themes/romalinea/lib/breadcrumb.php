@@ -33,8 +33,6 @@ _e( 'Blog Archives', 'text_domain' );
 // If the current page is a single post, show its title with the separator
 if (is_single()) {
 echo '<li>';
-echo $sep;
-
 the_title();
 echo '</li>';
         }

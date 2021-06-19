@@ -20,6 +20,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 global $product;
-
+$user = wp_get_current_user();
+$allowed_roles = array('editor', 'administrator', 'author');
 ?>
-<p class="test <?php echo esc_attr( apply_filters( 'woocommerce_product_price_class', 'price' ) ); ?>"><?php echo $product->get_price_html(); ?></p>
+
+<?php if( array_intersect($allowed_roles, $user->roles ) ) {  ?>
+<p class="<?php echo esc_attr( apply_filters( 'woocommerce_product_price_class', 'price' ) ); ?>"><?php echo $product->get_price_html(); ?></p>
+<?php } ?>
