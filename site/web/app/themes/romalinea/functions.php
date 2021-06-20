@@ -1090,8 +1090,6 @@ function roma_header_subheader_basic() {
  if ( is_shop() || is_product() ) :
 
    else : ?>
-
-
           <div class="subheader">
             <div class="container">
               <div class="row">
