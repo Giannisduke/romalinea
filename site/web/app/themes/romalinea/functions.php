@@ -484,7 +484,7 @@ add_action('woocommerce_shop_loop_item_title', 'prosilos_template_loop_price_aft
 remove_action('woocommerce_after_shop_loop_item','woocommerce_template_loop_add_to_cart',10);
 //add_action('woocommerce_after_shop_loop_item_2','woocommerce_template_loop_add_to_cart',10);
 
-add_filter( 'woocommerce_get_price_html', 'remove_class_price_html', 10, 2 );
+//add_filter( 'woocommerce_get_price_html', 'remove_class_price_html', 10, 2 );
 function remove_class_price_html( $price, $product ) {
   return str_replace( '<span class="woocommerce-Price-amount amount">', '', $price );
 }
@@ -624,8 +624,6 @@ function woocommerce_output_content_wrapper_end() { ?>
 <?php }
 //add_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10 );
 
-
-add_filter( 'woocommerce_breadcrumb_defaults', 'jk_woocommerce_breadcrumbs' );
 function jk_woocommerce_breadcrumbs() {
 return array(
         'delimiter'   => '',
@@ -648,7 +646,7 @@ array_pop( $crumbs );
 }
 
 return $crumbs;
-
+add_filter( 'woocommerce_breadcrumb_defaults', 'jk_woocommerce_breadcrumbs' );
 
 }
 add_filter( 'woocommerce_get_breadcrumb', 'tm_child_remove_product_title', 10, 2 );
@@ -1047,25 +1045,48 @@ else : ?>
 <?php endif;
 
 }
-add_action ('roma_header_form', 'roma_header_form_basic', 40 );
+add_action ('roma_header_form', 'roma_header_form_basic', 50 );
+
+function roma_header_form_right_icons() { ?>
+  <div class="order-lg-3">
+    <ul class="menu">
+    <?php $user = wp_get_current_user();
+      $allowed_roles = array( 'editor', 'administrator', 'author' );
+      if ( array_intersect( $allowed_roles, $user->roles ) ) { ?>
+         <li class="menu-cart">
+           <a href="<?php echo wc_get_cart_url(); ?>">
+             <span class="text">Cart</span>
+           </a>
+         </li>
+      <?php } else { ?>
+
+       <?php } ?>
+     <li class="list-inline-item menu-login">
+       <a href="<?php echo wc_get_page_permalink( 'myaccount' ); ?>">
+         <span class="text">Login / Sign Up</span>
+       </a>
+     </li>
+    </ul>
+  </div>
+<?php }
+add_action ('roma_header_form', 'roma_header_form_right_icons', 40 );
 
 function roma_header_subheader_basic() {
  if ( is_shop() || is_product() ) :
 
    else : ?>
 
-<div class="container-fluid subheader">
-  <div class="row">
-    <div class="col">
-      <div class="container">
-        <div class="row">
-          <div class="col">
+
+          <div class="subheader">
+            <div class="container">
+              <div class="row">
+                <div class="col">
             <?php the_roma_breadcrumb(); ?>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-    </div>
-  </div>
-</div>
+
 
 <?php endif;
 

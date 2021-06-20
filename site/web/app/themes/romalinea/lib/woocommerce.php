@@ -172,18 +172,19 @@ function woocommerce_header_add_to_cart_fragment( $fragments ) {
 
 	?>
 
-	<li class="menu-item menu-cart">
+	<li class="menu-cart">
 		<a href="<?php echo esc_url(wc_get_cart_url()); ?>" title="<?php _e('View your shopping cart', 'woothemes'); ?>">
 			<span>
 				<?php echo sprintf(_n('%d item', '%d items', $woocommerce->cart->cart_contents_count, 'woothemes'), $woocommerce->cart->cart_contents_count);?>
+					<?php echo $woocommerce->cart->get_cart_total(); ?><?php echo get_woocommerce_currency_symbol(); ?>
 			</span>
 			</br>
-			<?php echo $woocommerce->cart->get_cart_total(); ?><?php echo get_woocommerce_currency_symbol(); ?>
+
 		</a>
 
 </li>
 	<?php
-	$fragments['li.menu-item.menu-cart'] = ob_get_clean();
+	$fragments['li.menu-cart'] = ob_get_clean();
 	return $fragments;
 }
 
