@@ -1045,10 +1045,10 @@ else : ?>
 <?php endif;
 
 }
-add_action ('roma_header_form', 'roma_header_form_basic', 50 );
+//add_action ('roma_header_form', 'roma_header_form_basic', 50 );
 
 function roma_header_form_right_icons() { ?>
-  <div class="order-lg-3">
+  <div id="demo" class="collapse navbar-collapse">
     <ul class="menu">
     <?php $user = wp_get_current_user();
       $allowed_roles = array( 'editor', 'administrator', 'author' );
@@ -1067,6 +1067,21 @@ function roma_header_form_right_icons() { ?>
        </a>
      </li>
     </ul>
+    <?php  if ( is_shop() ) :
+
+    echo facetwp_display( 'facet', 'product_search' );
+
+    else : ?>
+
+    <form action="/shop/"  method="get" class="d-flex flex-row">
+
+       <input type="search" class="form-control" placeholder="Search &hellip;" value="" name="_product_search">
+
+           <button type="submit" class="btn btn-primary">Search</button>
+
+    </form>
+
+  <?php endif; ?>
   </div>
 <?php }
 add_action ('roma_header_form', 'roma_header_form_right_icons', 40 );
