@@ -44,14 +44,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 </aside>
 <div class="mainbar">
-	<div class="container">
-	<div class="row">
+	<div class="container p-0">
+	<div class="catalog-header">
 
 
 <?php echo facetwp_display( 'selections' ); ?>
 
 
-<div class="col-3">
+<div class="col-md-3">
 <?php echo facetwp_display( 'sort' ); ?>
 </div>
 	</div>

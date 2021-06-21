@@ -27,7 +27,7 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 
 	<?php endif; ?>
 
-	<form method="post" class="col-10 col-lg-3 login test">
+	<form method="post" class="col-10 col-lg-3 login mx-auto">
 	<?php do_action( 'woocommerce_login_form_start' ); ?>
 	<fieldset class="form-group">
 	<label for="username"><?php _e( 'Username or email address', 'woocommerce' ); ?> <span class="required">*</span></label>
