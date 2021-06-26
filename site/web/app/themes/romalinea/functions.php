@@ -484,11 +484,11 @@ add_action('woocommerce_shop_loop_item_title', 'prosilos_template_loop_price_aft
 remove_action('woocommerce_after_shop_loop_item','woocommerce_template_loop_add_to_cart',10);
 //add_action('woocommerce_after_shop_loop_item_2','woocommerce_template_loop_add_to_cart',10);
 
-//add_filter( 'woocommerce_get_price_html', 'remove_class_price_html', 10, 2 );
+
 function remove_class_price_html( $price, $product ) {
   return str_replace( '<span class="woocommerce-Price-amount amount">', '', $price );
 }
-
+//add_filter( 'woocommerce_get_price_html', 'remove_class_price_html', 10, 2 );
 
 add_action('woocommerce_shop_loop_item_title', 'flexrow_end', 40 );
 function flexrow_end() {
