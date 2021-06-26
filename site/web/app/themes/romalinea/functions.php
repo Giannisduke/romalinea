@@ -757,14 +757,6 @@ function loukia_front_carousel(){
 
                       </div> <!--/.Slides-->
 
-                      <a class="carousel-control-prev" href="#video-carousel" role="button" data-slide="prev">
-                       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                       <span class="sr-only">Previous</span>
-                     </a>
-                     <a class="carousel-control-next" href="#video-carousel" role="button" data-slide="next">
-                       <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                       <span class="sr-only">Next</span>
-                     </a>
 
                     </div> <!--Carousel Wrapper-->
         <?php endif; ?>
@@ -776,7 +768,7 @@ add_action('woocommerce_before_main_content', 'loukia_front_carousel', 5);
 
 function slide_accordion_button() { ?>
 
-  <div class="container">
+  <div class="accordion_spacer">
     <div class="row">
       <div class="col text-center">
         <hr class="devider_hero">

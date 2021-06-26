@@ -2,6 +2,11 @@
   <nav class="navbar navbar-expand-lg">
     <div class="container flex-column w-100 align-items-stretch" style="max-width:none;">
     <div class="row">
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#demo" aria-controls="demo" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="icon-bar top-bar"></span>
+        <span class="icon-bar middle-bar"></span>
+        <span class="icon-bar bottom-bar"></span>
+      </button>
       <div class="d-flex align-items-center">
         <a href="<?php echo home_url(); ?>">
       <img class="logo" src='<?php echo esc_url( get_theme_mod( 'themeslug_logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'>
@@ -12,11 +17,7 @@
     </div>
     </div>
 
-    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#demo" aria-controls="demo" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="icon-bar top-bar"></span>
-      <span class="icon-bar middle-bar"></span>
-      <span class="icon-bar bottom-bar"></span>
-    </button>
+
 
     <?php //wp_nav_menu( array( 'theme_location'    => 'top_left' ) ); ?>
     <?php do_action( 'roma_header_form' ); ?>

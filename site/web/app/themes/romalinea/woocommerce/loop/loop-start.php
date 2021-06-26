@@ -29,10 +29,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 		</div>
 		</div>
 		<div class="row">
-			<?php  echo facetwp_display( 'facet', 'result_counts' ); ?>
 			<div class="col-6">
 			<a href="#" onclick="FWP.reset()" class="reset-btn"><?php echo esc_html( 'Ακύρωση φίλτρων' ); ?></a>
 		</div>
+			<?php  echo facetwp_display( 'facet', 'result_counts' ); ?>
 	</div>
 
 
