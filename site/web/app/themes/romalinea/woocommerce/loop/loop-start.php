@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<div class="row px-3">
+<div class="row px-0">
 <aside class="sidebar">
 	<div class="container heading">
 		<div class="row">
