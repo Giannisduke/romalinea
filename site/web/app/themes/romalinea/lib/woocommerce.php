@@ -355,7 +355,7 @@ function simple_product_meta() {
 	    }
 	    // Set the array in a coma separated string of product tags for example
 	    $output = implode( '   ', $output );
-			echo '<div class="product-meta"><span class="tags">' . $output . '</span></div>';
+			echo '<div class="product-meta"><span class="tags">' . $output . '</span>';
 	  }
 
 	?>
@@ -363,51 +363,20 @@ function simple_product_meta() {
 <?php }
 add_action ('woocommerce_single_product_summary', 'simple_product_meta', 34 );
 
-function simple_product_toe_cap() {
-	global $post;
-	// get attribute "technical features" for a defined product ID
-	$toe_cap_terms = get_the_terms($post, 'pa_toe-cap');
-	if( ! empty( $toe_cap_terms ) ){ ?>
-	<div class="product-meta">
-		<span class="toe-cap">
-	<?php	foreach ($toe_cap_terms as $term) :
+function simple_product_media() {
 
-			//	$product_protypo_url = get_permalink(wc_get_page_id('shop')) . '?_eu_prototype=' . $term->slug;
-				$toe_cap_name = $term->name;
-				echo '<h2 class="iso"><a href="#">' . $toe_cap_name . '</a></h2>';
+	$image_url = get_the_post_thumbnail_url();
+	echo '<span class="file_photo"><a href="'.$image_url.'">Φωτογραφίες</a></span></div>';
+}
+add_action ('woocommerce_single_product_summary', 'simple_product_media', 35 );
 
-		endforeach;
-	} else {
-	    // No product attribute is set for this product
-	}
-	?>
-</span>
-</div>
+function simple_product_files() { ?>
+	<?php if( get_field('help_files') ): ?>
+		<div class="product-files"><span class="file_files"><a href="<?php the_field('help_files'); ?>">Βοηθητικά Αρχεία</a></span></div>
+	<?php endif; ?>
+
 <?php }
-//add_action ('woocommerce_single_product_summary', 'simple_product_toe_cap', 35 );
-
-function simple_product_safety() {
-	global $post;
-	// get attribute "technical features" for a defined product ID
-	$safety_terms = get_the_terms($post, 'pa_ασφάλεια');
-	if( ! empty( $safety_terms ) ){ ?>
-	<div class="product-meta">
-		<span class="safety">
-	<?php	foreach ($safety_terms as $term) :
-
-			//	$product_protypo_url = get_permalink(wc_get_page_id('shop')) . '?_eu_prototype=' . $term->slug;
-				$safety_name = $term->name;
-				echo '<h2 class="iso"><a href="#">' . $safety_name . '</a></h2>';
-
-		endforeach;
-	} else {
-	    // No product attribute is set for this product
-	}
-	?>
-</span>
-</div>
-<?php }
-//add_action ('woocommerce_single_product_summary', 'simple_product_safety', 36 );
+add_action ('woocommerce_single_product_summary', 'simple_product_files', 36 );
 
 function prosilos_attributes_verifivation() {
   global $post;
