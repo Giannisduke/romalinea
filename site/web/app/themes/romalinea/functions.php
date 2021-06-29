@@ -729,7 +729,7 @@ function loukia_front_carousel(){
                     $slide_external_video = get_sub_field('slide_external_video');
                     ?>
                     <div class="carousel-item <?php if($counter === 0){ echo "active";} ?>" data-slide-no="<?php echo $counter;?>" style="background: url('<?php echo $slide_image;?>') no-repeat center; background-size: cover;">
-                        <div class="carousel-caption d-none d-md-block">
+                        <div class="carousel-caption">
 
                             <?php  if (get_sub_field('slide_text', $page_id)) { ?>
                               <div class="container">
