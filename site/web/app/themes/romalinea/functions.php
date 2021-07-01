@@ -1067,7 +1067,7 @@ function roma_header_form_right_icons() { ?>
 
     <form action="/shop/"  method="get" class="d-flex flex-row">
        <input type="search" class="form-control-lg inner_form" placeholder="Search &hellip;" value="" name="_product_search">
-           <button type="submit" class="btn btn-primary">Search</button>
+           <button type="submit" class="btn btn-primary"><span class="btn-label"><i class="facetwp-btn-inner"></i></span></button>
     </form>
 
   <?php endif; ?>
