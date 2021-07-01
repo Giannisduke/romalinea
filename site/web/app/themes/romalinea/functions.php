@@ -1066,11 +1066,8 @@ function roma_header_form_right_icons() { ?>
     else : ?>
 
     <form action="/shop/"  method="get" class="d-flex flex-row">
-
-       <input type="search" class="form-control" placeholder="Search &hellip;" value="" name="_product_search">
-
+       <input type="search" class="form-control-lg inner_form" placeholder="Search &hellip;" value="" name="_product_search">
            <button type="submit" class="btn btn-primary">Search</button>
-
     </form>
 
   <?php endif; ?>
