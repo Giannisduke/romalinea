@@ -3755,8 +3755,9 @@ class GFFormDisplay {
 
 	public static function get_progress_steps( $form, $page ) {
 
-		$progress_steps = "<ul id='gf_page_steps_{$form['id']}' class='gf_page_steps'>";
-		$pages  = isset( $form['pagination']['pages'] ) ? $form['pagination']['pages'] : array();
+		$progress_steps = "<ul id='gf_page_steps_{$form['id']}' class='gf_page_steps'><li class='gf_step register_title'><h3>Εγγραφή νέου χρήστη</h3></li>"; ?>
+
+		 <?php $pages  = isset( $form['pagination']['pages'] ) ? $form['pagination']['pages'] : array();
 		for ( $i = 0, $count = sizeof( $pages ); $i < $count; $i ++ ) {
 			$step_number    = $i + 1;
 			$active_class   = $step_number == $page ? ' gf_step_active' : '';
