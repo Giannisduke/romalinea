@@ -74,10 +74,12 @@ function wsis_dequeue_stylesandscripts_select2() {
     }
 }
 
-/**
- * Trim zeros in price decimals
- **/
- add_filter( 'woocommerce_price_trim_zeros', '__return_true' );
+// Hide trailing zeros on prices.
+add_filter( 'woocommerce_price_trim_zeros', 'wc_hide_trailing_zeros', 10, 1 );
+function wc_hide_trailing_zeros( $trim ) {
+    // set to false to show trailing zeros
+    return true;
+}
 
 /**
  * Remove shop from breadcrumb
