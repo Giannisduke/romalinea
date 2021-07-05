@@ -366,7 +366,7 @@ add_action ('woocommerce_single_product_summary', 'simple_product_meta', 34 );
 function simple_product_media() {
 
 	$image_url = get_the_post_thumbnail_url();
-	echo '<span class="file_photo"><a href="'.$image_url.'">Φωτογραφίες</a></span></div>';
+	echo '<span class="file_photo"><a href="'.$image_url.'">Φωτογραφίες</a></span></div></div>';
 }
 add_action ('woocommerce_single_product_summary', 'simple_product_media', 35 );
 

@@ -120,6 +120,7 @@ function display_sidebar() {
     is_product(),
     is_product_category(),
     is_shop(),
+    is_product_tag(),
   ]);
 
   return apply_filters('sage/display_sidebar', $display);

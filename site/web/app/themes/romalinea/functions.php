@@ -805,15 +805,14 @@ endif;
 
 function product_open() { ?>
   <div class="row">
-    <h1 class="animate__animated animate__bounce">An animated element</h1>
-  </div>
-  <div class="row">
   <div class="container catalog">
+    <div class="row">
 <?php }
 add_action( 'woocommerce_before_single_product', 'product_open', 5 );
 
 function product_close() { ?>
 </div>
+  
   </div>
 <?php }
 add_action( 'woocommerce_after_single_product', 'product_close', 20 );
