@@ -75,6 +75,11 @@ function wsis_dequeue_stylesandscripts_select2() {
 }
 
 /**
+ * Trim zeros in price decimals
+ **/
+ add_filter( 'woocommerce_price_trim_zeros', '__return_true' );
+
+/**
  * Remove shop from breadcrumb
  */
 add_filter( 'woocommerce_get_breadcrumb', 'remove_shop_crumb', 20, 2 );
