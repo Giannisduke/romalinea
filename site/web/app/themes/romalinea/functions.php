@@ -812,7 +812,7 @@ add_action( 'woocommerce_before_single_product', 'product_open', 5 );
 
 function product_close() { ?>
 </div>
-  
+
   </div>
 <?php }
 add_action( 'woocommerce_after_single_product', 'product_close', 20 );
@@ -830,6 +830,7 @@ foreach ($terms as $term){
     $product_cat_name = $term->name;
     $product_cat_description = $term->description;
     $product_cat_url = wc_get_page_permalink( 'shop' ) . '?_product_categories=' . $term->slug;
+  //  $product_cat_page_url = get_term_link();
 
     $parent_categories_ids = get_ancestors($product_cat_id, 'product_cat');
     foreach($parent_categories_ids as $category_id) {
