@@ -53,7 +53,7 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 
 <?php if ( 'yes' === get_option( 'woocommerce_enable_myaccount_registration' ) ) : ?>
 
-<?php echo gravity_form( 1, false, false, false, '', false ); ?>
+<?php echo gravity_form( 4, false, false, false, '', false ); ?>
 
 	<?php endif; ?>
 	</div>
