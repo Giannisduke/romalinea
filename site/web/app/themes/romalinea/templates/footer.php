@@ -14,7 +14,26 @@
   </div>
   <div class="description">
     <?php bloginfo( 'description' ); ?>
-    </div>
+  </div>
+  <ul class="social-icons">
+    <li class="ico facebook">
+      <a href="#">
+        <span class="text">facebook</span>
+      </a>
+    </li>
+    <li class="ico linkedin">
+      <a href="#">
+        <span class="text">linkedin</span>
+      </a>
+    </li>
+    <li class="ico twitter">
+      <a href="#">
+        <span class="text">twitter</span>
+      </a>
+    </li>
+
+  </ul>
+
     </div>
     </div>
     <div class="col-2">
@@ -36,7 +55,7 @@
   ?>
     </div>
     <div class="col-2">
-    
+
       <?php
       wp_nav_menu( array(
       'theme_location'  => 'footer_nav_2',

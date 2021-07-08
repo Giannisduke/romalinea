@@ -22,7 +22,7 @@
     <?php //wp_nav_menu( array( 'theme_location'    => 'top_left' ) ); ?>
     <?php do_action( 'roma_header_form' ); ?>
   </div>
-  <div class="tow">
+  <div class="row">
     <?php do_action( 'roma_header_subheader' ); ?>
     </div>
   </div>
