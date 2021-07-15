@@ -22,6 +22,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 </ul>
 <?php echo facetwp_display( 'facet', 'products_pager' ); ?>
 </div>
-
 </div>
 </div>
