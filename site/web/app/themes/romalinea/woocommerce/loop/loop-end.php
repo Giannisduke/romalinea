@@ -20,7 +20,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 </ul>
+
+</div>
+</div>
+</div>
 <?php echo facetwp_display( 'facet', 'products_pager' ); ?>
-</div>
-</div>
-</div>
