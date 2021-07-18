@@ -50,19 +50,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <?php echo facetwp_display( 'selections' ); ?>
 
-<div class="col-md-2 test">
+<div class="views">
 	<div class="form-check">
-	  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-	  <label class="form-check-label" for="exampleRadios1">
-	    radio
-	  </label>
-		<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" checked>
-		<label class="form-check-label" for="exampleRadios2">
-			radio 2
-		</label>
+		<input class="form-check-input" type="radio" name="thubs_number" id="exampleRadios2" value="option2">
+		<label class="form-check-label few" for="exampleRadios2"> </label>
+		<input class="form-check-input" type="radio" name="thubs_number" id="exampleRadios1" value="option1" checked>
+	  <label class="form-check-label many" for="exampleRadios1"> </label>
 	</div>
 </div>
-<div class="col-md-3">
+<div class="sort">
 <?php echo facetwp_display( 'sort' ); ?>
 </div>
 	</div>

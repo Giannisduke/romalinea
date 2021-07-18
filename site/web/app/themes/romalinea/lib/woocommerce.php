@@ -678,3 +678,21 @@ function woocommerce_before_notifications() { ?>
 </div>
 <?php }
 //add_action ('woocommerce_before_cart', 'woocommerce_before_notifications', 5 );
+
+add_filter( 'woocommerce_get_image_size_thumbnail', function( $size ) {
+	return array(
+		'width'  => 700,
+		'height' => 700,
+		'crop'   => 1,
+	);
+} );
+
+function wpse_287488_product_thumbnail_size( $size ) {
+    global $product;
+
+    $size = 'woocommerce_thumbnail';
+
+
+    return $size;
+}
+add_filter( 'single_product_archive_thumbnail_size', 'wpse_287488_product_thumbnail_size' );
