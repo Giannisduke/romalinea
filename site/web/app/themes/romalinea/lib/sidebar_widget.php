@@ -34,7 +34,7 @@ class Sidebarfilters_Widget extends WP_Widget {
 		}
 
 		// Output generated fields
-		echo '<div class="panel-collapse collapse show"><div class="panel-body">';
+		echo '<div class="panel-collapse collapse"><div class="panel-body">';
 		echo facetwp_display( 'facet', $name );
 		echo '</div></div>';
 		echo $args['after_widget'];
