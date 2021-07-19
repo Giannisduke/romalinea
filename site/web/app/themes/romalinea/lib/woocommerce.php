@@ -696,3 +696,12 @@ function wpse_287488_product_thumbnail_size( $size ) {
     return $size;
 }
 add_filter( 'single_product_archive_thumbnail_size', 'wpse_287488_product_thumbnail_size' );
+
+
+// Change the Number of WooCommerce Products Displayed Per Page
+add_filter( 'loop_shop_per_page', 'lw_loop_shop_per_page', 30 );
+
+function lw_loop_shop_per_page( $products ) {
+ $products = 27;
+ return $products;
+}

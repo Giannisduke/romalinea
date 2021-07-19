@@ -302,50 +302,6 @@ add_filter( 'facetwp_sort_options', function( $options, $params ) {
 }, 10, 3 );
 
 
-function prosilos_front_shop(){  ?>
-  <div class="row">
-    <div class="col-3">
-  <div class="panel-group" id="accordion">
-  	  <?php dynamic_sidebar( 'sidebar-primary' ); ?>
-  		</div>
-      </div>
-      <div class="col-3">
-  <ul itemscope itemtype="https://schema.org/ItemList" class="facetwp-template">
-     <li class="popular">
-       <div class="card">
-         <div class="popular_product mx-auto"></div>
-         <div class="card-body test">
-           <h5 class="card-title"><?php _e( 'Δημοφιλη Προϊοντα', 'prosilos' ); ?></h5>
-           <p class="card-text">Είμαστε εδώ για να σας βοηθήσουμε να επιλέξετε το κατάλληλο προϊόν.</p>
-         </div>
-       </div>
-     </li>
-  	<?php $args = array(
-  			'post_type' => 'product',
-  			'posts_per_page' => 11,
-        'facetwp' => true
-  			);
-  		$loop = new WP_Query( $args );
-  		if ( $loop->have_posts() ) {
-        rewind_posts();
-  			while ( $loop->have_posts() ) : $loop->the_post();
-  				wc_get_template_part( 'content', 'product' );
-  			endwhile;
-  		} else {
-  			echo __( 'No products found' );
-  		}
-  		wp_reset_postdata();
-  	?>
-</ul>
-</div>
-</div>
-
-<?php  echo facetwp_display( 'facet', 'load_more' ); ?>
-
-
-<? }
-
-add_action('prosilos_front', 'prosilos_front_shop', 10);
 
 
 function prosilos_front_brands() {
