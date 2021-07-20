@@ -24,11 +24,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 <aside class="sidebar">
 	<div class="container heading">
 		<div class="row">
-			<div class="col">
-		<span class="h2"><?php echo esc_html( 'Φίλτρα Αναζήτησης' ); ?></span>
-		</div>
-		</div>
-		<div class="row">
 			<div class="col-6">
 			<a href="#" onclick="FWP.reset()" class="reset-btn"><?php echo esc_html( 'Ακύρωση φίλτρων' ); ?></a>
 		</div>

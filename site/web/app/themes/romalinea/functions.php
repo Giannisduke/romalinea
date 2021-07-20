@@ -726,7 +726,7 @@ function slide_accordion_button() { ?>
 
   <div class="accordion_spacer">
     <div class="row">
-      <div class="col text-center">
+      <div class="devider">
         <hr class="devider_hero">
         <a class="icon-collapse accordion-toggle" data-toggle="collapse" href="#herocollapse" role="button" aria-expanded="false" aria-controls="herocollapse">
           <span class="text">Link with href</span>
