@@ -22,17 +22,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <div class="row px-0">
 <aside class="sidebar">
-	<div class="container heading">
-		<div class="row">
-			<div class="col-6">
-			<a href="#" onclick="FWP.reset()" class="reset-btn"><?php echo esc_html( 'Ακύρωση φίλτρων' ); ?></a>
-		</div>
-			<?php  echo facetwp_display( 'facet', 'result_counts' ); ?>
-	</div>
-
-
-
-	</div>
 <div class="panel-group" id="accordion">
 	  <?php dynamic_sidebar( 'sidebar-primary' ); ?>
 		</div>
@@ -43,18 +32,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div class="catalog-header">
 
 
-<?php echo facetwp_display( 'selections' ); ?>
 
-<div class="views">
-	<div class="form-check">
-		<input class="form-check-input" type="radio" name="thubs_number" id="exampleRadios2" value="option2">
-		<label class="form-check-label few" for="exampleRadios2"> </label>
-		<input class="form-check-input" type="radio" name="thubs_number" id="exampleRadios1" value="option1" checked>
-	  <label class="form-check-label many" for="exampleRadios1"> </label>
-	</div>
-</div>
-<div class="sort">
-<?php echo facetwp_display( 'sort' ); ?>
-</div>
 	</div>
 	<ul itemscope itemtype="https://schema.org/ItemList" class="facetwp-template">

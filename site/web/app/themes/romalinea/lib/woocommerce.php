@@ -702,6 +702,6 @@ add_filter( 'single_product_archive_thumbnail_size', 'wpse_287488_product_thumbn
 add_filter( 'loop_shop_per_page', 'lw_loop_shop_per_page', 30 );
 
 function lw_loop_shop_per_page( $products ) {
- $products = 27;
+ $products = 12;
  return $products;
 }
