@@ -572,7 +572,6 @@ function woocommerce_output_content_wrapper() { ?>
   <div class="row">
     <div class="container">
       <div class="tools">
-
         <div class="sidebar_header">
           <div class="reset_info">
              <div class="">
@@ -607,7 +606,7 @@ function woocommerce_output_content_wrapper() { ?>
         <div class="views">
           <!--RADIO 1-->
            <input type="radio" class="radio_item" value="" name="item_view_1" id="radio1">
-               <label class="label_item_view_1" for="radio1">
+               <label class="label_item label_item_view_1" for="radio1">
                  <svg version="1.2" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                  	 x="0px" y="0px" width="10.94px" height="25px" viewBox="0 0 10.94 25" xml:space="preserve">
                  <g>
@@ -620,7 +619,7 @@ function woocommerce_output_content_wrapper() { ?>
 
           <!--RADIO 2-->
            <input type="radio" class="radio_item" value="" name="item_view_2" id="radio2">
-               <label class="label_item_view_2" for="radio2">
+               <label class="label_item label_item_view_2" for="radio2">
                  <svg version="1.2" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                  	 x="0px" y="0px" width="25px" height="25px" viewBox="0 0 25 25" xml:space="preserve">
                  <g>
@@ -636,7 +635,7 @@ function woocommerce_output_content_wrapper() { ?>
 
            <!--RADIO 3-->
            <input type="radio" class="radio_item" value="" name="item_view_3" id="radio3">
-           <label class="label_item_view_3" for="radio3">
+           <label class="label_item label_item_view_3 active_thumbs" for="radio3">
              <svg version="1.2" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
              	 x="0px" y="0px" width="39.2px" height="25px" viewBox="0 0 39.2 25" xml:space="preserve">
              <g>
@@ -654,7 +653,7 @@ function woocommerce_output_content_wrapper() { ?>
            </label>
            <!--RADIO 4-->
            <input type="radio" class="radio_item" value="" name="item_view_4" id="radio4">
-           <label class="label_item_view_4" for="radio4">
+           <label class="label_item label_item_view_4" for="radio4">
              <svg version="1.2" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
              	 x="0px" y="0px" width="39.2px" height="25px" viewBox="0 0 39.2 25" xml:space="preserve">
              <g>

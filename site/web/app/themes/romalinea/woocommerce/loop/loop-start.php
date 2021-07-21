@@ -34,4 +34,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 
 	</div>
-	<ul itemscope itemtype="https://schema.org/ItemList" class="facetwp-template">
+	<ul itemscope itemtype="https://schema.org/ItemList" class="facetwp-template view_3">
