@@ -24,4 +24,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 </div>
 </div>
 </div>
+<div class="row">
+<div class="col-9 offset-md-3">
 <?php echo facetwp_display( 'facet', 'products_pager' ); ?>
+</div>
+</div>

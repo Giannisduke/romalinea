@@ -119,7 +119,7 @@ class FacetWP_Facet_Pager extends FacetWP_Facet
         }
 
         $data = empty( $page ) ? '' : ' data-page="' . $page . '"';
-        return '<li class="page-item "><a class="' . $class . '"' . $data . '>' . $label . '</a></li>';
+        return '<li class="page-item "><a class="' . $class . ' '.$class_parent.' "' . $data . '>' . $label . '</a></li>';
     }
 
 
