@@ -561,34 +561,7 @@ class FacetWP_Renderer
                 'label' => __( 'Sort by', 'fwp-front' ),
                 'query_args' => []
             ],
-            'title_asc' => [
-                'label' => __( 'Title (A-Z)', 'fwp-front' ),
-                'query_args' => [
-                    'orderby' => 'title',
-                    'order' => 'ASC',
-                ]
-            ],
-            'title_desc' => [
-                'label' => __( 'Title (Z-A)', 'fwp-front' ),
-                'query_args' => [
-                    'orderby' => 'title',
-                    'order' => 'DESC',
-                ]
-            ],
-            'date_desc' => [
-                'label' => __( 'Date (Newest)', 'fwp-front' ),
-                'query_args' => [
-                    'orderby' => 'date',
-                    'order' => 'DESC',
-                ]
-            ],
-            'date_asc' => [
-                'label' => __( 'Date (Oldest)', 'fwp-front' ),
-                'query_args' => [
-                    'orderby' => 'date',
-                    'order' => 'ASC',
-                ]
-            ]
+
         ];
 
         return apply_filters( 'facetwp_sort_options', $options, [

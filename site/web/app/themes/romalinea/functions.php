@@ -292,12 +292,7 @@ add_filter( 'facetwp_sort_options', function( $options, $params ) {
           'order' => 'ASC',
       )
   );
-    $options['views'] = array(
-        'label' => 'Most Views',
-        'query_args' => array(
-            'orderby' => 'post_views',
-        )
-    );
+
     return $options;
 }, 10, 3 );
 
@@ -688,6 +683,47 @@ function woocommerce_output_content_wrapper() { ?>
 
         </div>
         <div class="sort">
+             <div data-role="controlgroup">
+                 <a data-role="button" data-val="default" class="select-change acs" id="btnAuckland">
+                   <svg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px'
+                      width='33.129px' height='31.444px' viewBox='0 0 33.129 31.444' enable-background='new 0 0 33.129 31.444' xml:space='preserve'>
+                   <g>
+                     <path fill='#ED1C24' d='M27.5,30.944c0,0.276,0.224,0.5,0.5,0.5s0.5-0.224,0.5-0.5v-23c0-0.276-0.224-0.5-0.5-0.5
+                       s-0.5,0.224-0.5,0.5V30.944'/>
+                     <path fill='#ED1C24' d='M28,0l-2.121,2.121l-2.823,2.823c-0.246,0.245-0.246,0.643,0,0.889l1.232,1.232
+                       c0.245,0.246,0.643,0.246,0.889,0L28,4.242l2.823,2.823c0.245,0.246,0.643,0.246,0.889,0l1.232-1.232
+                       c0.246-0.245,0.246-0.643,0-0.889l-2.823-2.823L28,0z'/>
+                     <path fill='#ED1C24' d='M22.5,28.722c0.276,0,0.5-0.224,0.5-0.5s-0.224-0.5-0.5-0.5h-22c-0.276,0-0.5,0.224-0.5,0.5
+                       s0.224,0.5,0.5,0.5H22.5'/>
+                     <path fill='#ED1C24' d='M22.5,22.722c0.276,0,0.5-0.224,0.5-0.5s-0.224-0.5-0.5-0.5h-16c-0.276,0-0.5,0.224-0.5,0.5
+                       s0.224,0.5,0.5,0.5H22.5'/>
+                     <path fill='#ED1C24' d='M22.5,16.722c0.276,0,0.5-0.224,0.5-0.5c0-0.276-0.224-0.5-0.5-0.5h-11c-0.276,0-0.5,0.224-0.5,0.5
+                       c0,0.276,0.224,0.5,0.5,0.5H22.5'/>
+                   </g>
+                   </svg>
+                 </a>
+                 <a data-role="button" data-val="price_desc" class="select-change dsc"id="btnWellington">
+                   <svg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px'
+                      width='33.129px' height='31.444px' viewBox='0 0 33.129 31.444' enable-background='new 0 0 33.129 31.444' xml:space='preserve'>
+                   <g>
+                     <path fill='#ED1C24' d='M27.5,0.5v23c0,0.276,0.224,0.5,0.5,0.5c0.276,0,0.5-0.224,0.5-0.5v-23C28.5,0.224,28.276,0,28,0
+                       C27.724,0,27.5,0.224,27.5,0.5'/>
+                     <path fill='#ED1C24' d='M30.121,29.323l2.823-2.823c0.246-0.246,0.246-0.644,0-0.889l-1.232-1.232
+                       c-0.246-0.246-0.644-0.246-0.889,0L28,27.202l-2.823-2.823c-0.246-0.246-0.644-0.246-0.889,0l-1.232,1.232
+                       c-0.246,0.246-0.246,0.644,0,0.889l2.823,2.823L28,31.444L30.121,29.323z'/>
+                     <path fill='#ED1C24' d='M22.5,1.5h-22C0.224,1.5,0,1.724,0,2s0.224,0.5,0.5,0.5h22C22.776,2.5,23,2.276,23,2S22.776,1.5,22.5,1.5'
+                       />
+                     <path fill='#ED1C24' d='M22.5,7.5h-16C6.224,7.5,6,7.724,6,8c0,0.276,0.224,0.5,0.5,0.5h16C22.776,8.5,23,8.276,23,8
+                       C23,7.724,22.776,7.5,22.5,7.5'/>
+                     <path fill='#ED1C24' d='M22.5,13.5h-11c-0.276,0-0.5,0.224-0.5,0.5c0,0.276,0.224,0.5,0.5,0.5h11c0.276,0,0.5-0.224,0.5-0.5
+                       C23,13.724,22.776,13.5,22.5,13.5'/>
+                   </g>
+                   </svg>
+                 </a>
+             </div>
+        </a>
+
+
         <?php echo facetwp_display( 'sort' ); ?>
         </div>
       </div>
