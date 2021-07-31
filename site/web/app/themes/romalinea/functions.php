@@ -565,7 +565,7 @@ add_action( 'woocommerce_before_shop_loop_item_front', 'woocommerce_template_loo
 ####################################################
 function woocommerce_output_content_wrapper() { ?>
   <div class="row">
-    <div class="container">
+    <div class="container pr-4">
       <div class="tools">
         <div class="sidebar_header">
           <div class="reset_info">
