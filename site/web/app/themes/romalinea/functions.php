@@ -565,7 +565,7 @@ add_action( 'woocommerce_before_shop_loop_item_front', 'woocommerce_template_loo
 ####################################################
 function woocommerce_output_content_wrapper() { ?>
   <div class="row">
-    <div class="container pr-4">
+    <div class="toolbar">
       <div class="tools">
         <div class="sidebar_header">
           <div class="reset_info">
@@ -755,7 +755,7 @@ function woocommerce_output_content_wrapper() { ?>
                   </svg>
                 </a>
 <?php } else {
-   // your code for logged out user 
+   // your code for logged out user
 } ?>
              </div>
         <?php echo facetwp_display( 'sort' ); ?>
