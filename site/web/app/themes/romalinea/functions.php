@@ -1170,25 +1170,10 @@ function dequeue_gf_stylesheets() {
 }
 //add_action( 'gform_enqueue_scripts_1', 'dequeue_gf_stylesheets', 11 );
 
-function roma_header_form_basic() {
- if ( is_shop() ) :
-
-echo facetwp_display( 'facet', 'product_search' );
-
-else : ?>
-
-<form action="/shop/"  method="get" class="d-flex flex-row">
-
-   <input type="search" class="form-control" placeholder="Search &hellip;" value="" name="_product_search">
-
-       <button type="submit" class="btn btn-primary">Search</button>
-
-</form>
-
-<?php endif;
-
+function roma_header_language() {
+  do_action('wpml_add_language_selector');
 }
-//add_action ('roma_header_form', 'roma_header_form_basic', 50 );
+//add_action ('roma_header_form', 'roma_header_language', 45 );
 
 function roma_header_form_right_icons() { ?>
   <div id="demo" class="collapse navbar-collapse">
@@ -1213,7 +1198,7 @@ function roma_header_form_right_icons() { ?>
     <?php  if ( is_shop() ) :
 
     echo facetwp_display( 'facet', 'product_search' );
-
+    do_action('wpml_add_language_selector');
     else : ?>
 
     <form action="/shop/"  method="get" class="d-flex flex-row">
@@ -1221,7 +1206,9 @@ function roma_header_form_right_icons() { ?>
            <button type="submit" class="btn btn-primary"><span class="btn-label"><i class="facetwp-btn-inner"></i></span></button>
     </form>
 
-  <?php endif; ?>
+  <?php
+  do_action('wpml_add_language_selector');
+endif; ?>
   </div>
 <?php }
 add_action ('roma_header_form', 'roma_header_form_right_icons', 40 );

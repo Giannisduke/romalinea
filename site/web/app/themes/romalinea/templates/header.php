@@ -21,7 +21,7 @@
 
     <?php //wp_nav_menu( array( 'theme_location'    => 'top_left' ) ); ?>
     <?php do_action( 'roma_header_form' );
-    do_action('wpml_add_language_selector');
+    
     ?>
   </div>
   <div class="row">
