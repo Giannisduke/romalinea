@@ -4,8 +4,8 @@ class Sidebarfilters_Widget extends WP_Widget {
 	function __construct() {
 		parent::__construct(
 			'sidebarfilters_widget',
-			esc_html__( 'Sidebar Filters', 'prosilos' ),
-			array( 'description' => esc_html__( 'Sidebar Filters Widgets ', 'prosilos' ), ) // Args
+			esc_html__( 'Sidebar Filters', 'romalinea' ),
+			array( 'description' => esc_html__( 'Sidebar Filters Widgets ', 'romalinea' ), ) // Args
 		);
 	}
 
@@ -47,7 +47,7 @@ class Sidebarfilters_Widget extends WP_Widget {
 			if ( isset($widget_field['default']) ) {
 				$default = $widget_field['default'];
 			}
-			$widget_value = ! empty( $instance[$widget_field['id']] ) ? $instance[$widget_field['id']] : esc_html__( $default, 'prosilos' );
+			$widget_value = ! empty( $instance[$widget_field['id']] ) ? $instance[$widget_field['id']] : esc_html__( $default, 'romalinea' );
 			switch ( $widget_field['type'] ) {
 				case 'select':
 					$output .= '<p>';
@@ -65,7 +65,7 @@ class Sidebarfilters_Widget extends WP_Widget {
 					break;
 				default:
 					$output .= '<p>';
-					$output .= '<label for="'.esc_attr( $this->get_field_id( $widget_field['id'] ) ).'">'.esc_attr( $widget_field['label'], 'prosilos' ).':</label> ';
+					$output .= '<label for="'.esc_attr( $this->get_field_id( $widget_field['id'] ) ).'">'.esc_attr( $widget_field['label'], 'romalinea' ).':</label> ';
 					$output .= '<input class="widefat" id="'.esc_attr( $this->get_field_id( $widget_field['id'] ) ).'" name="'.esc_attr( $this->get_field_name( $widget_field['id'] ) ).'" type="'.$widget_field['type'].'" value="'.esc_attr( $widget_value ).'">';
 					$output .= '</p>';
 			}
@@ -74,10 +74,10 @@ class Sidebarfilters_Widget extends WP_Widget {
 	}
 
 	public function form( $instance ) {
-		$title = ! empty( $instance['title'] ) ? $instance['title'] : esc_html__( '', 'prosilos' );
+		$title = ! empty( $instance['title'] ) ? $instance['title'] : esc_html__( '', 'romalinea' );
 		?>
 		<p>
-			<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_attr_e( 'Title:', 'prosilos' ); ?></label>
+			<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_attr_e( 'Title:', 'romalinea' ); ?></label>
 			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
 		</p>
 		<?php

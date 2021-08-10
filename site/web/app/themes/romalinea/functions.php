@@ -1197,9 +1197,11 @@ function roma_header_form_right_icons() { ?>
     </ul>
     <?php  if ( is_shop() ) :
 
-    echo facetwp_display( 'facet', 'product_search' );
-    do_action('wpml_add_language_selector');
-    else : ?>
+    echo facetwp_display( 'facet', 'product_search' ); ?>
+    <div class="d-none d-sm-block">
+    <?php do_action('wpml_add_language_selector'); ?>
+    </div>
+    <?php else : ?>
 
     <form action="/shop/"  method="get" class="d-flex flex-row">
        <input type="search" class="form-control-lg inner_form" placeholder="Αναζήτηση Προϊόντων" value="" name="_product_search">
@@ -1232,3 +1234,10 @@ function roma_header_subheader_basic() {
 
 }
 add_action ('roma_header_subheader', 'roma_header_subheader_basic', 40 );
+
+function remove_wcml_stylesheet() {
+    wp_dequeue_style( 'wpml-legacy-dropdown-0' );
+    wp_dequeue_style( 'wcml-dropdown-0-css' );
+    wp_dequeue_style( 'wcml-dropdown-0' );
+    }
+add_action( 'wp_enqueue_scripts', 'remove_wcml_stylesheet', 100 );

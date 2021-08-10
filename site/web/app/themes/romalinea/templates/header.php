@@ -11,17 +11,21 @@
         <a href="<?php echo home_url(); ?>">
       <img class="logo" src='<?php echo esc_url( get_theme_mod( 'themeslug_logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'>
         </a>
-      <div>
+      <div class="summary">
       <?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>
       <h1><?php echo esc_attr( get_bloginfo( 'description', 'display' ) ); ?></h1>
     </div>
+
+      <?php dynamic_sidebar('sidebar-header'); ?>
+      <?php dynamic_sidebar('sidebar-header-medium'); ?>
+
     </div>
 
 
 
     <?php //wp_nav_menu( array( 'theme_location'    => 'top_left' ) ); ?>
     <?php do_action( 'roma_header_form' );
-    
+
     ?>
   </div>
   <div class="row">

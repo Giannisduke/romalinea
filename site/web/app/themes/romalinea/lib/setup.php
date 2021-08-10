@@ -26,7 +26,7 @@ function setup() {
 
   // Make theme available for translation
   // Community translations can be found at https://github.com/roots/sage-translations
-  load_theme_textdomain('prosilos', get_template_directory() . '/lang');
+  load_theme_textdomain('romalinea', get_template_directory() . '/lang');
 
   // Enable plugins to manage the document title
   // http://codex.wordpress.org/Function_Reference/add_theme_support#Title_Tag
@@ -35,17 +35,17 @@ function setup() {
   // Register wp_nav_menu() menus
   // http://codex.wordpress.org/Function_Reference/register_nav_menus
   register_nav_menus([
-    'top_left' => __('Top Left', 'prosilos')
+    'top_left' => __('Top Left', 'romalinea')
   ]);
   register_nav_menus([
-    'top_right' => __('Top Right', 'prosilos')
+    'top_right' => __('Top Right', 'romalinea')
   ]);
   register_nav_menus([
-    'footer_nav_1' => __('Footer Navigation 1', 'prosilos')
+    'footer_nav_1' => __('Footer Navigation 1', 'romalinea')
   ]);
   register_nav_menus([
-    'footer_nav_2' => __('Footer Navigation 2', 'prosilos'),
-    'footer_social' => __('Footer Social', 'prosilos')
+    'footer_nav_2' => __('Footer Navigation 2', 'romalinea'),
+    'footer_social' => __('Footer Social', 'romalinea')
   ]);
 
 
@@ -75,7 +75,7 @@ add_action('after_setup_theme', __NAMESPACE__ . '\\setup');
 function widgets_init() {
 
   register_sidebar([
-    'name'          => __('Primary', 'prosilos'),
+    'name'          => __('Primary', 'romalinea'),
     'id'            => 'sidebar-primary',
     'before_widget' => '<div class="panel panel-default %1$s %2$s">',
     'after_widget'  => '</div>',
@@ -84,7 +84,7 @@ function widgets_init() {
   ]);
 
   register_sidebar([
-    'name'          => __('Footer', 'prosilos'),
+    'name'          => __('Footer', 'romalinea'),
     'id'            => 'sidebar-footer',
     'before_widget' => '<div class="col widget %1$s %2$s">',
     'after_widget'  => '</div>',
@@ -92,9 +92,17 @@ function widgets_init() {
     'after_title'   => '</h5>'
   ]);
   register_sidebar([
-    'name'          => __('Header', 'prosilos'),
+    'name'          => __('Header', 'romalinea'),
     'id'            => 'sidebar-header',
-    'before_widget' => '<div class="col widget %1$s %2$s">',
+    'before_widget' => '<div class="col d-sm-none widget %1$s %2$s">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h5>',
+    'after_title'   => '</h5>'
+  ]);
+  register_sidebar([
+    'name'          => __('Header Medium', 'romalinea'),
+    'id'            => 'sidebar-header-medium',
+    'before_widget' => '<div class="col-6 d-lg-none d-none d-sm-block widget %1$s %2$s">',
     'after_widget'  => '</div>',
     'before_title'  => '<h5>',
     'after_title'   => '</h5>'

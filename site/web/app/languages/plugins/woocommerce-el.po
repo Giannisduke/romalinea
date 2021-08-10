@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - WooCommerce - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-08-02 12:07:24+0000\n"
+"PO-Revision-Date: 2021-08-05 07:46:34+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -14,6 +14,21 @@ msgstr ""
 #: packages/woocommerce-admin/src/Notes/MarketingJetpack.php:109
 msgid "Get backups"
 msgstr "Λάβετε αντίγραφα ασφαλείας"
+
+#: packages/woocommerce-blocks/src/StoreApi/Utilities/CartController.php:745
+msgctxt "shipping packages"
+msgid "Shipping method"
+msgstr "Μέθοδος αποστολής"
+
+#. translators: %d: shipping package number
+#: packages/woocommerce-blocks/src/StoreApi/Utilities/CartController.php:742
+msgctxt "shipping packages"
+msgid "Shipping method %d"
+msgstr "Μέθοδος αποστολής  %d"
+
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartSchema.php:292
+msgid "The rate at which tax is applied."
+msgstr "Ο συντελεστής με τον οποίο εφαρμόζεται ο φόρος."
 
 #: packages/woocommerce-admin/src/Features/PaymentGatewaySuggestions/DefaultPaymentGateways.php:75
 msgid "Mollie"
@@ -2234,10 +2249,6 @@ msgstr "Ciudad Autónoma de Buenos Aires"
 msgid "Make sure that your checkout is working properly before you launch your store. Go through your checkout process in its entirety: from adding a product to your cart, choosing a shipping location, and making a payment."
 msgstr "Σιγουρευτείτε ότι η διαδικασία ολοκλήρωσης μιας παραγγελίας στο ταμείο λειτουργεί σωστά πριν ανοίξετε το κατάστημά σας. Περάστε μέσα από όλα τα στάδια της διαδικασίας ολοκλήρωσης της παραγγελίας: από την προσθήκη ενός προϊόντος στο καλάθι, μέχρι την επιλογή διεύθυνσης αποστολής και την πληρωμή."
 
-#: i18n/states.php:510
-msgid "Peloponnese"
-msgstr "Πελοπόνησος"
-
 #: i18n/states.php:509
 msgid "Central Greece"
 msgstr "Κεντρική Ελλάδα"
@@ -2508,6 +2519,10 @@ msgstr "στις %1$s μέσω %2$s"
 msgid "This will change the stock status of all variations."
 msgstr "Αυτό θα αλλάξει την κατάσταση αποθέματος όλων των παραλλαγών."
 
+#: i18n/states.php:510
+msgid "Peloponnese"
+msgstr "Πελοπόννησος"
+
 #: includes/class-wc-post-types.php:63
 msgctxt "Taxonomy name"
 msgid "Product type"
@@ -2745,14 +2760,14 @@ msgstr "Η προσωρινή μνήμη στατιστικών εκκαθαρί
 msgid "Customizable products"
 msgstr "Προσαρμόσιμα προϊόντα"
 
+#: packages/woocommerce-admin/src/Features/Onboarding.php:400
+msgid "Education and learning"
+msgstr "Εκπαίδευση και μάθηση"
+
 #. Translators: %1$s, %2$s, and %3$s are all build commands to be run in order.
 #: packages/woocommerce-admin/woocommerce-admin.php:127
 msgid "You have installed a development version of WooCommerce Admin which requires files to be built. From the plugin directory, run %1$s and %2$s to install dependencies, then %3$s to build the files."
 msgstr "Έχετε εγκαταστήσει μια development έκδοση του WooCommerce Admin η οποία απαιτεί να δημιουργηθούν αρχεία. Από τον κατάλογο του πρόσθετου, εκτελέστε %1$s και %2$s για να εγκαταστήσετε τα προαπαιτούμενα, κι έπειτα %3$s για να δημιουργήσετε τα αρχεία."
-
-#: packages/woocommerce-admin/src/Features/Onboarding.php:400
-msgid "Education and learning"
-msgstr "Εκπαίδευση και μάθηση"
 
 #: packages/woocommerce-admin/src/Notes/CustomizeStoreWithBlocks.php:70
 msgid "With our blocks, you can select and display products, categories, filters, and more virtually anywhere on your site — no need to use shortcodes or edit lines of code. Learn more about how to use each one of them."
