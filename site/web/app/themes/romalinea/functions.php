@@ -1198,7 +1198,7 @@ function roma_header_form_right_icons() { ?>
     <?php  if ( is_shop() ) :
 
     echo facetwp_display( 'facet', 'product_search' ); ?>
-    <div class="d-none d-sm-block">
+    <div class="d-none d-lg-block">
     <?php do_action('wpml_add_language_selector'); ?>
     </div>
     <?php else : ?>
