@@ -54,7 +54,7 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 <?php if ( 'yes' === get_option( 'woocommerce_enable_myaccount_registration' ) ) : ?>
 <div class="col-12 col-md-9 px-5">
 	<h2>Εγγραφή</h2>
-<?php echo gravity_form( 2, false, false, false, '', false ); ?>
+<?php echo gravity_form( 5, false, false, false, '', false ); ?>
 </div>
 	<?php endif; ?>
 	</div>
