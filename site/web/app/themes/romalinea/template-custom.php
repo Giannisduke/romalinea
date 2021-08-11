@@ -4,7 +4,7 @@
  */
 ?>
   <div class="row">
-    <div class="container-fluid catalog test">
+    <div class="container-fluid catalog">
         <?php //do_action( 'prosilos_front' ); ?>
         <?php the_content(); ?>
     </div>
