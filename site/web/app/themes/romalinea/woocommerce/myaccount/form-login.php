@@ -52,9 +52,10 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 	</form>
 
 <?php if ( 'yes' === get_option( 'woocommerce_enable_myaccount_registration' ) ) : ?>
-
-<?php echo gravity_form( 5, false, false, false, '', false ); ?>
-
+<div class="col-12 col-md-9 px-5">
+	<h2>Εγγραφή</h2>
+<?php echo gravity_form( 2, false, false, false, '', false ); ?>
+</div>
 	<?php endif; ?>
 	</div>
 	<?php do_action( 'woocommerce_after_customer_login_form' ); ?>

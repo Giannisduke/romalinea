@@ -1207,10 +1207,10 @@ function roma_header_form_right_icons() { ?>
        <input type="search" class="form-control-lg inner_form" placeholder="Αναζήτηση Προϊόντων" value="" name="_product_search">
            <button type="submit" class="btn btn-primary"><span class="btn-label"><i class="facetwp-btn-inner"></i></span></button>
     </form>
-
-  <?php
-  do_action('wpml_add_language_selector');
-endif; ?>
+<div class="d-none d-lg-block">
+  <?php do_action('wpml_add_language_selector'); ?>
+</div>
+<?php endif; ?>
   </div>
 <?php }
 add_action ('roma_header_form', 'roma_header_form_right_icons', 40 );

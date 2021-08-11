@@ -3,7 +3,7 @@
   <div class="row bottom">
     <div class="company">
 
-<div class="row"
+<div class="row">
     <a class="navbar-brand" href="<?= esc_url(home_url('/')); ?>">
       <img class="logo" src='<?php echo esc_url( get_theme_mod( 'themeslug_logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'>
     </a>
