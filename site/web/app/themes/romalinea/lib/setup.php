@@ -86,7 +86,7 @@ function widgets_init() {
   register_sidebar([
     'name'          => __('Footer', 'romalinea'),
     'id'            => 'sidebar-footer',
-    'before_widget' => '<div class="col widget %1$s %2$s">',
+    'before_widget' => '<div class="col p-0 widget %1$s %2$s">',
     'after_widget'  => '</div>',
     'before_title'  => '<h5>',
     'after_title'   => '</h5>'
