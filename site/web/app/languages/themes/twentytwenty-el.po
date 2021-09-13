@@ -20,12 +20,12 @@ msgstr "Το προεπιλεγμένο μας θέμα για το 2020 έχε�
 msgid "Twenty Twenty"
 msgstr "Twenty Twenty"
 
-#: classes/class-twentytwenty-customize.php:126
+#: classes/class-twentytwenty-customize.php:130
 msgctxt "color"
 msgid "Custom"
 msgstr "Προσαρμοσμένο"
 
-#: classes/class-twentytwenty-customize.php:125
+#: classes/class-twentytwenty-customize.php:129
 msgctxt "color"
 msgid "Default"
 msgstr "Προεπιλεγμένο"
@@ -110,12 +110,12 @@ msgctxt "toggle text"
 msgid "Search"
 msgstr "Αναζήτηση"
 
-#: functions.php:498
+#: functions.php:526
 msgctxt "color"
 msgid "Secondary"
 msgstr "Δευτερεύον"
 
-#: functions.php:493
+#: functions.php:521
 msgctxt "color"
 msgid "Primary"
 msgstr "Κύριο"
@@ -124,7 +124,7 @@ msgstr "Κύριο"
 msgid "Nothing Found"
 msgstr "Δεν βρέθηκε κάτι"
 
-#: classes/class-twentytwenty-customize.php:246
+#: classes/class-twentytwenty-customize.php:250
 msgid "Show author bio"
 msgstr "Εμφάνιση πληροφοριών συντάκτη"
 
@@ -137,7 +137,7 @@ msgctxt "Theme starter content"
 msgid "The New UMoMA Opens its Doors"
 msgstr "Το νέο UMoMA ανοίγει τις πόρτες του"
 
-#: inc/template-tags.php:396
+#: inc/template-tags.php:414
 msgctxt "A string that is output before one or more categories"
 msgid "In"
 msgstr "Σε"
@@ -205,39 +205,39 @@ msgstr "Ο κορυφαίος προορισμός για τη σύγχρονη 
 msgid "The New UMoMA Opens its Doors"
 msgstr "Το νέο UMoMA ανοίγει τις πόρτες του"
 
-#: classes/class-twentytwenty-customize.php:395
+#: classes/class-twentytwenty-customize.php:399
 msgid "Overlay Opacity"
 msgstr "Διαφάνεια Επικάλυψης"
 
-#: classes/class-twentytwenty-customize.php:375
+#: classes/class-twentytwenty-customize.php:379
 msgid "The color used for the text in the overlay."
 msgstr "Το χρώμα που χρησιμοποιείται για το κείμενο στην επικάλυψη."
 
-#: classes/class-twentytwenty-customize.php:374
+#: classes/class-twentytwenty-customize.php:378
 msgid "Overlay Text Color"
 msgstr "Χρώμα κειμένου επικάλυψης"
 
-#: classes/class-twentytwenty-customize.php:353
+#: classes/class-twentytwenty-customize.php:357
 msgid "The color used for the overlay. Defaults to the accent color."
 msgstr "Το χρώμα που χρησιμοποιείται για την επικάλυψη. Εξ ορισμού είναι ίδιο με το χρώμα έμφασης."
 
-#: classes/class-twentytwenty-customize.php:352
+#: classes/class-twentytwenty-customize.php:356
 msgid "Overlay Background Color"
 msgstr "Χρώμα Φόντου Επικάλυψης"
 
-#: classes/class-twentytwenty-customize.php:283
+#: classes/class-twentytwenty-customize.php:287
 msgid "Settings for the \"Cover Template\" page template. Add a featured image to use as background."
 msgstr "Ρυθμίσεις για το πρότυπο σελίδας \"Πρότυπο εξωφύλλου\". Προσθέστε μια επιλεγμένη εικόνα για να τη χρησιμοποιήσετε ως φόντο."
 
-#: classes/class-twentytwenty-customize.php:183
+#: classes/class-twentytwenty-customize.php:187
 msgid "Apply a custom color for links, buttons, featured images."
 msgstr "Εφαρμόστε ένα χρώμα της επιλογής σας για συνδέσμους, κουμπιά, επιλεγμένες εικόνες."
 
-#: classes/class-twentytwenty-customize.php:123
+#: classes/class-twentytwenty-customize.php:127
 msgid "Primary Color"
 msgstr "Κύριο χρώμα"
 
-#: template-parts/modal-search.php:20 searchform.php:24
+#: searchform.php:28 template-parts/modal-search.php:20
 msgid "Search for:"
 msgstr "Αναζήτηση για:"
 
@@ -277,11 +277,17 @@ msgstr "404 η σελίδα δεν βρέθηκε"
 msgid "Full Width Template"
 msgstr "Πρότυπο πλήρους πλάτους"
 
-#: template-parts/pagination.php:25
+#. Translators: This text contains HTML to allow the text to be shorter on
+#. small screens. The text inside the span with the class nav-short will be
+#. hidden on small screens.
+#: template-parts/pagination.php:27
 msgid "Older <span class=\"nav-short\">Posts</span>"
 msgstr "Παλαιότερα <span class=\"nav-short\">Άρθρα</span>"
 
-#: template-parts/pagination.php:21
+#. Translators: This text contains HTML to allow the text to be shorter on
+#. small screens. The text inside the span with the class nav-short will be
+#. hidden on small screens.
+#: template-parts/pagination.php:19
 msgid "Newer <span class=\"nav-short\">Posts</span>"
 msgstr "Πιο πρόσφατα <span class=\"nav-short\">Άρθρα</span>"
 
@@ -310,15 +316,16 @@ msgid "Footer"
 msgstr "Υποσέλιδο"
 
 #. translators: %s: Author name.
-#: template-parts/entry-author-bio.php:20 inc/template-tags.php:357
+#. translators: %s: Author name.
+#: inc/template-tags.php:375 template-parts/entry-author-bio.php:20
 msgid "By %s"
 msgstr "Από τον/την %s"
 
-#: template-parts/content.php:48 template-parts/content-cover.php:138
+#: template-parts/content-cover.php:138 template-parts/content.php:48
 msgid "Pages:"
 msgstr "Σελίδες:"
 
-#: template-parts/content.php:48 template-parts/content-cover.php:138
+#: template-parts/content-cover.php:138 template-parts/content.php:48
 msgid "Page"
 msgstr "Σελίδας"
 
@@ -326,12 +333,12 @@ msgstr "Σελίδας"
 msgid "Scroll Down"
 msgstr "Κύλιση προς τα κάτω"
 
-#: searchform.php:27
+#: searchform.php:31
 msgctxt "submit button"
 msgid "Search"
 msgstr "Αναζήτηση"
 
-#: searchform.php:25
+#: searchform.php:29
 msgctxt "placeholder"
 msgid "Search &hellip;"
 msgstr "Αναζήτηση &hellip;"
@@ -345,28 +352,28 @@ msgid "Search:"
 msgstr "Αναζήτηση:"
 
 #. translators: %s: Post title. Only visible to screen readers.
-#: inc/template-tags.php:207
+#: inc/template-tags.php:223
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
 msgstr "Επεξεργασία του<span class=\"screen-reader-text\">%s</span>"
 
-#: inc/template-tags.php:448
+#: inc/template-tags.php:466
 msgid "Sticky post"
 msgstr "Άρθρο Καρφιτσωμένο στην πρώτη σελίδα"
 
-#: inc/template-tags.php:410
+#: inc/template-tags.php:428
 msgid "Tags"
 msgstr "Ετικέτες"
 
-#: template-parts/content-cover.php:70 template-parts/entry-header.php:36
-#: inc/template-tags.php:392
+#: inc/template-tags.php:410 template-parts/content-cover.php:70
+#: template-parts/entry-header.php:36
 msgid "Categories"
 msgstr "Κατηγορίες"
 
-#: inc/template-tags.php:374
+#: inc/template-tags.php:392
 msgid "Post date"
 msgstr "Ημ. δημοσίευσης"
 
-#: inc/template-tags.php:350
+#: inc/template-tags.php:368
 msgid "Post author"
 msgstr "Συντάκτης άρθρου"
 
@@ -386,95 +393,95 @@ msgstr "Μενού"
 msgid "Continue reading"
 msgstr "Περισσότερα"
 
-#: functions.php:550
+#: functions.php:578
 msgctxt "Short name of the larger font size in the block editor."
 msgid "XL"
 msgstr "XL"
 
-#: functions.php:549
+#: functions.php:577
 msgctxt "Name of the larger font size in the block editor"
 msgid "Larger"
 msgstr "Μεγαλύτερο"
 
-#: functions.php:544
+#: functions.php:572
 msgctxt "Short name of the large font size in the block editor."
 msgid "L"
 msgstr "L"
 
-#: functions.php:543
+#: functions.php:571
 msgctxt "Name of the large font size in the block editor"
 msgid "Large"
 msgstr "Μεγάλο"
 
-#: functions.php:538
+#: functions.php:566
 msgctxt "Short name of the regular font size in the block editor."
 msgid "M"
 msgstr "M"
 
-#: functions.php:537
+#: functions.php:565
 msgctxt "Name of the regular font size in the block editor"
 msgid "Regular"
 msgstr "Κανονικά"
 
-#: functions.php:532
+#: functions.php:560
 msgctxt "Short name of the small font size in the block editor."
 msgid "S"
 msgstr "S"
 
-#: functions.php:531
+#: functions.php:559
 msgctxt "Name of the small font size in the block editor"
 msgid "Small"
 msgstr "Μικρό"
 
-#: functions.php:516
+#: functions.php:544
 msgid "Background Color"
 msgstr "Χρώμα Φόντου"
 
-#: functions.php:503
+#: functions.php:531
 msgid "Subtle Background"
 msgstr "Διακριτικό φόντο"
 
-#: functions.php:488
+#: functions.php:516
 msgid "Accent Color"
 msgstr "Χρώμα Έμφασης"
 
-#: functions.php:383
+#: functions.php:403
 msgid "Widgets in this area will be displayed in the second column in the footer."
 msgstr "Οι μικροεφαρμογές σε αυτή τη περιοχή θα προβάλλονται στη δεύτερη στήλη του υποσέλιδου."
 
-#: functions.php:381
+#: functions.php:401
 msgid "Footer #2"
 msgstr "Υποσέλιδο #2"
 
-#: functions.php:371
+#: functions.php:391
 msgid "Widgets in this area will be displayed in the first column in the footer."
 msgstr "Οι μικροεφαρμογές σε αυτή τη περιοχή θα προβάλλονται στη πρώτη στήλη του υποσέλιδου."
 
-#: functions.php:369
+#: functions.php:389
 msgid "Footer #1"
 msgstr "Υποσέλιδο #1"
 
-#: functions.php:344
+#: functions.php:362
 msgid "Skip to the content"
 msgstr "Μετάβαση στο περιεχόμενο"
 
-#: functions.php:266
+#: functions.php:277
 msgid "Social Menu"
 msgstr "Μενού κοινωνικών δικτύων"
 
-#: functions.php:265
+#: functions.php:276
 msgid "Footer Menu"
 msgstr "Μενού υποσέλιδου"
 
-#: functions.php:264
+#: functions.php:275
 msgid "Mobile Menu"
 msgstr "Μενού για κινητά"
 
-#: functions.php:263
+#: functions.php:274
 msgid "Desktop Expanded Menu"
 msgstr "Αναπτυγμένο μενού για Desktop υπολογιστή"
 
-#: functions.php:262
+#: functions.php:273
 msgid "Desktop Horizontal Menu"
 msgstr "Οριζόντιο μενού για σταθερούς υπολογιστές"
 
@@ -516,82 +523,82 @@ msgstr "Μία απάντηση στο &ldquo;%s&rdquo;"
 msgid "Leave a comment"
 msgstr "Σχολίασε"
 
-#: classes/class-twentytwenty-walker-page.php:107 inc/template-tags.php:558
+#: classes/class-twentytwenty-walker-page.php:110 inc/template-tags.php:580
 msgid "Show sub menu"
 msgstr "Εμφάνιση του υπό μενού"
 
 #. translators: %d: ID of a post.
-#: classes/class-twentytwenty-walker-page.php:70
+#: classes/class-twentytwenty-walker-page.php:73
 msgid "#%d (no title)"
 msgstr "#%d (χωρίς τίτλο)"
 
-#: classes/class-twentytwenty-walker-comment.php:133
+#: classes/class-twentytwenty-walker-comment.php:137
 msgid "By Post Author"
 msgstr "Από τον συντάκτη του άρθρου"
 
-#: classes/class-twentytwenty-walker-comment.php:98
+#: classes/class-twentytwenty-walker-comment.php:102
 msgid "Your comment is awaiting moderation."
 msgstr "Το σχόλιό σας περιμένει έγκριση."
 
-#: classes/class-twentytwenty-walker-comment.php:82
+#: classes/class-twentytwenty-walker-comment.php:86
 msgid "Edit"
 msgstr "Επεξεργασία"
 
 #. translators: 1: Comment date, 2: Comment time.
-#: classes/class-twentytwenty-walker-comment.php:68
+#: classes/class-twentytwenty-walker-comment.php:72
 msgid "%1$s at %2$s"
 msgstr "%1$s την %2$s"
 
-#: classes/class-twentytwenty-walker-comment.php:56
+#: classes/class-twentytwenty-walker-comment.php:60
 msgid "says:"
 msgstr "λέει:"
 
-#: classes/class-twentytwenty-customize.php:396
+#: classes/class-twentytwenty-customize.php:400
 msgid "Make sure that the contrast is high enough so that the text is readable."
 msgstr "Βεβαιωθείτε ότι η αντίθεση είναι αρκετά υψηλή ώστε το κείμενο να είναι ευανάγνωστο."
 
-#: classes/class-twentytwenty-customize.php:306
+#: classes/class-twentytwenty-customize.php:310
 msgid "Creates a parallax effect when the visitor scrolls."
 msgstr "Δημιουργεί ένα εφέ parallax όταν ο επισκέπτης κάνει κύλιση."
 
-#: classes/class-twentytwenty-customize.php:305
+#: classes/class-twentytwenty-customize.php:309
 msgid "Fixed Background Image"
 msgstr "Σταθερή εικόνα φόντου"
 
 #. Template Name of the theme
-#: classes/class-twentytwenty-customize.php:281
+#: classes/class-twentytwenty-customize.php:285
 msgid "Cover Template"
 msgstr "Πρότυπο εξωφύλλου"
 
-#: classes/class-twentytwenty-customize.php:270
+#: classes/class-twentytwenty-customize.php:274
 msgid "Summary"
 msgstr "Περίληψη"
 
-#: classes/class-twentytwenty-customize.php:269
+#: classes/class-twentytwenty-customize.php:273
 msgid "Full text"
 msgstr "Πλήρες κείμενο"
 
-#: classes/class-twentytwenty-customize.php:267
+#: classes/class-twentytwenty-customize.php:271
 msgid "On archive pages, posts show:"
 msgstr "Στις ιστοσελίδες αρχείου, τα άρθρα εμφανίζουν:"
 
-#: classes/class-twentytwenty-customize.php:225
+#: classes/class-twentytwenty-customize.php:229
 msgid "Show search in header"
 msgstr "Προβολή αναζήτησης στην κεφαλίδα"
 
-#: classes/class-twentytwenty-customize.php:202
+#: classes/class-twentytwenty-customize.php:206
 msgid "Theme Options"
 msgstr "Ρυθμίσεις θέματος"
 
-#: classes/class-twentytwenty-customize.php:101
+#: classes/class-twentytwenty-customize.php:105
 msgid "Header &amp; Footer Background Color"
 msgstr "Χρώμα φόντου κεφαλίδας &amp; υποσέλιδου"
 
-#: classes/class-twentytwenty-customize.php:82
+#: classes/class-twentytwenty-customize.php:86
 msgid "Scales the logo to half its uploaded size, making it sharp on high-res screens."
 msgstr "Προσαρμόζει το λογότυπο στο μισό του αρχικού του μεγέθους, καθιστώντας το ευκρινές σε οθόνες υψηλής ανάλυσης."
 
-#: classes/class-twentytwenty-customize.php:81
+#: classes/class-twentytwenty-customize.php:85
 msgid "Retina logo"
 msgstr "Λογότυπο Retina"
 
